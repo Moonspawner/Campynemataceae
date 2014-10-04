@@ -1,0 +1,6 @@
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\modem.wav
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\FastSkript.dll
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\FastSkript.pdb
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\FastSkript\obj\Debug\FastSkript.csprojResolveAssemblyReference.cache
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\FastSkript\obj\Debug\FastSkript.dll
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\FastSkript\obj\Debug\FastSkript.pdb

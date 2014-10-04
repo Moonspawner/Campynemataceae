@@ -1,0 +1,13 @@
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.exe.config
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.csprojResolveAssemblyReference.cache
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\modem.wav
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.exe.manifest
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.application
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.exe
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.pdb
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.exe.manifest
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.application
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.exe
+C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.pdb
