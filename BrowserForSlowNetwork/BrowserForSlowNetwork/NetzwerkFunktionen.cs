@@ -10,6 +10,8 @@ namespace DSLBrowser
     {
         public static string URL = "";
         private static string punkte2 = "..";
+        public static bool IfFinishd;
+        public static string dots;
 
 
             public static string NameServerIP = "http://alexmitter.tk/tknameserver/standart.tkn";
@@ -22,17 +24,37 @@ namespace DSLBrowser
                 NameServerBekommenURI = "";
             }
             Console.WriteLine("Versuche zu Nameserver zu verbinden...");
+
             try
+            {
+            Parallel.Invoke(new Action[]{()=>{
+                while(IfFinishd==true)
+                {
+                    Console.WriteLine("Versuche zu Nameserver zu verbinden.", dots);
+                    dots = dots + ".";
+                    
+                }
+
+
+                },()=>{
+                    try
             {
                 try
                 {
                     NameServerFileSpace = new System.Net.WebClient().DownloadString("http://192.168.0.106/tknameserver/standart.tkn");
+                    IfFinishd = false;
 
                 }
                 catch
                 {
                     NameServerFileSpace = new System.Net.WebClient().DownloadString(NameServerIP);
+                    IfFinishd = false;
+
                 }
+                        
+            }
+                    }});
+
             }
             catch
             {
@@ -47,7 +69,8 @@ namespace DSLBrowser
                 CoreClass.Reload();
             }
 
-                Console.WriteLine(NameServerFileSpace);
+
+            Console.WriteLine(NameServerFileSpace);
             Console.ReadKey();
         }
 
