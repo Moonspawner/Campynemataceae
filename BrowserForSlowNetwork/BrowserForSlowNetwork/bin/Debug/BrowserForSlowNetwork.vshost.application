@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="BrowserForSlowNetwork.exe.manifest" size="5088">
+    <dependentAssembly dependencyType="install" codebase="BrowserForSlowNetwork.exe.manifest" size="5583">
       <assemblyIdentity name="BrowserForSlowNetwork.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mM5z7eAr6/6NpAOXlSOxVD29Xim0i+XW9oHAK/9Zy4U=</dsig:DigestValue>
+        <dsig:DigestValue>Sg3aa+LYlrPiBhd7BmHHtNh/Qy4Cl4X4dehv6eS2uEI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

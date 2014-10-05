@@ -4,3 +4,9 @@ C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\bi
 C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\FastSkript\obj\Debug\FastSkript.csprojResolveAssemblyReference.cache
 C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\FastSkript\obj\Debug\FastSkript.dll
 C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\FastSkript\obj\Debug\FastSkript.pdb
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\modem.wav
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\FastSkript.dll
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\FastSkript.pdb
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\FastSkript\obj\Debug\FastSkript.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\FastSkript\obj\Debug\FastSkript.dll
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\FastSkript\obj\Debug\FastSkript.pdb

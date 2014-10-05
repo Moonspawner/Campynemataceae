@@ -17,7 +17,7 @@ using System.Diagnostics;
 
 namespace DSLBrowser
 {
-    static class Programtic
+    static class CoreClass
     {
         public static string FileSpace = "";
         public static string Ausgabeninhalt = "";
@@ -47,11 +47,12 @@ namespace DSLBrowser
             skriptausfüren = true;
             LoadPlugins();
             Console.Title = "Telekom Browser :: StartPage";
+            NetzwerkFunktionen.NameServerConnect();
             NetzwerkFunktionen.Aufrufen();
             NetzwerkFunktionen.Downloader();
             Tags();
             Ausgabe();
-            Programtic.Reload();
+            CoreClass.Reload();
         }
 
         public static void Ausgabe()
@@ -225,7 +226,7 @@ namespace DSLBrowser
                         {
                             return;
                         }
-                        Programtic.CodeWriter();
+                        CoreClass.CodeWriter();
                          
                     }
                     skriptausfüren = true;
@@ -264,7 +265,7 @@ namespace DSLBrowser
                             {
                                 return;
                             }
-                            Programtic.CodeWriter();
+                            CoreClass.CodeWriter();
                         }
 
                         skriptausfüren = true;

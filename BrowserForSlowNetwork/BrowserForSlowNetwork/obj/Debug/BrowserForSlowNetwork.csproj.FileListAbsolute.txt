@@ -11,3 +11,16 @@ C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\ob
 C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.application
 C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.exe
 C:\Users\dr4\Documents\SourceTree\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.pdb
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\modem.wav
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.exe.config
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.exe.manifest
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.application
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.exe
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.pdb
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.exe.manifest
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.application
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.exe
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.pdb

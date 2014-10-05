@@ -11,6 +11,27 @@ namespace DSLBrowser
         public static string URL = "";
         private static string punkte2 = "..";
 
+
+            public static string NameServerIP = "http://alexmitter.tk/tknameserver/standart.tkn";
+            public static string NameServerFileSpace;
+            public static string NameServerBekommenURI;
+        public static void NameServerConnect()
+        {
+            if (NameServerBekommenURI != "")
+            {
+                NameServerBekommenURI = "";
+            }
+            Console.WriteLine("Versuche zu Nameserver zu verbinden...");
+            NameServerFileSpace = new System.Net.WebClient().DownloadString(NameServerIP);
+            Console.WriteLine(NameServerFileSpace);
+            Console.ReadKey();
+
+
+
+
+
+        }
+
         public static void Aufrufen()
         {
             Console.Clear();
@@ -22,9 +43,9 @@ namespace DSLBrowser
             Console.WriteLine("    ║Mit 'Lesezeichen' öffnen sie die Lesezeichen-Menü.                   ║");
             Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
             Console.Write("    >> ");
-            Programtic.Eingabe = Console.ReadLine();
+            CoreClass.Eingabe = Console.ReadLine();
             //Prüft ob die Datei mit einem / endet, wenn ja leitet er auf die index.txt weiter
-            switch(Programtic.Eingabe){
+            switch(CoreClass.Eingabe){
                 case"about:us":
                     About.ÜberUns();
                     break;
@@ -34,17 +55,17 @@ namespace DSLBrowser
             }
             
             
-            if (Programtic.Eingabe == "")
+            if (CoreClass.Eingabe == "")
             {
-                Programtic.Eingabe = "index";
+                CoreClass.Eingabe = "index";
             }
-            if (Programtic.Eingabe == "about:us")
+            if (CoreClass.Eingabe == "about:us")
             {
 
                 About.ÜberUns();
                 Aufrufen();
             }
-            else if (Programtic.Eingabe == "Lesezeichen" | Programtic.Eingabe == "lesezeichen")
+            else if (CoreClass.Eingabe == "Lesezeichen" | CoreClass.Eingabe == "lesezeichen")
             {
                 Lesezeichen.Menü();
             }
@@ -55,7 +76,7 @@ namespace DSLBrowser
                                                      PingReply Result = Sender.Send("alexmitter.tk");
                                                      if (Result.Status == IPStatus.Success)
                                                      {
-                                                         URL = "http://alexmitter.tk/tkbrowser/" + Programtic.Eingabe + ".tk";
+                                                         URL = "http://alexmitter.tk/tkbrowser/" + CoreClass.Eingabe + ".tk";
                                                      }
                                                      else
                                                      {
@@ -63,32 +84,32 @@ namespace DSLBrowser
                                                          PingReply Result2 = Sender.Send("188.193.113.201");
                                                          if (Result2.Status == IPStatus.Success)
                                                          {
-                                                             URL = "http://188.193.113.201/tkbrowser/" + Programtic.Eingabe + ".tk";
+                                                             URL = "http://188.193.113.201/tkbrowser/" + CoreClass.Eingabe + ".tk";
                                                          }
                                                          else 
                                                          {
                                                              Console.WriteLine("");
                                                              Console.WriteLine("Der Client kann sich nicht mit dem Server verbinden. Prüfen sie ihre Internetverbindung und versuchen sie es später nochmal.");
-                                                             Programtic.zähler = 1;
-                                                             Programtic.tester2 = 1;
+                                                             CoreClass.zähler = 1;
+                                                             CoreClass.tester2 = 1;
                                                              Console.ReadLine();
                                                              Console.Clear();
                                                              Aufrufen();
                                                          }
                                                      }
-                                                     Programtic.zähler = 1;
+                                                     CoreClass.zähler = 1;
                                                      punkte2 = "..";
                 },()=>{
-                          Programtic.zähler = 0;
+                          CoreClass.zähler = 0;
                           System.Threading.Thread.Sleep(500);
                           Console.Clear();
                           Console.Title = "Telekom Browser :: Anpingen...";
-                          while(Programtic.zähler == 0)
+                          while(CoreClass.zähler == 0)
                           {
                               punkte2 += ".";
                               Console.WriteLine("Adresse wird angepingt"+punkte2);
                               System.Threading.Thread.Sleep(1000);
-                              if (Programtic.zähler == 0) {
+                              if (CoreClass.zähler == 0) {
                                   Console.Clear();
                               }
                           }
@@ -104,45 +125,45 @@ namespace DSLBrowser
             Parallel.Invoke(new Action[]{()=>{
                                                  try
                                                  {
-                                                     Programtic.FileSpace = new System.Net.WebClient().DownloadString(URL);
+                                                     CoreClass.FileSpace = new System.Net.WebClient().DownloadString(URL);
                                                      Console.Clear();
                                                      Console.Title = "";
                                                      Console.ForegroundColor = ConsoleColor.Green;
-                                                     Console.WriteLine(">> Datei: "+ Programtic.Eingabe);                //Was soll das darstellen?(nachricht von Alexmitter)
+                                                     Console.WriteLine(">> Datei: "+ CoreClass.Eingabe);                //Was soll das darstellen?(nachricht von Alexmitter)
                                                      Console.ForegroundColor = ConsoleColor.Gray;
                                                      Console.WriteLine("");
                                                  }
                                                  catch
                                                  {
-                                                     if(Programtic.tester2 == 0)
+                                                     if(CoreClass.tester2 == 0)
                                                      {
                                                          Console.Clear();
                                                          Console.Title = "Telekom Browser :: Fehler";
                                                          Console.WriteLine("Die Datei konnte nicht gefunden werden. Bitte überprüfen sie ihre Eingabe.");
                                                          player.Stop();
-                                                         Programtic.zähler = 1;
-                                                         Programtic.tester = 1;
+                                                         CoreClass.zähler = 1;
+                                                         CoreClass.tester = 1;
                                                          Console.ReadLine();
                                                          Console.Clear();
                                                          Aufrufen();
                                                      }
                                                  }
-                                                 Programtic.zähler = 1;
+                                                 CoreClass.zähler = 1;
             },()=>{
-                      Programtic.zähler = 0;
+                      CoreClass.zähler = 0;
                       System.Threading.Thread.Sleep(500);
-                      if (Programtic.tester == 0)
+                      if (CoreClass.tester == 0)
                       {
                           Console.Clear();
                       }
                       player.Play();
                       Console.Title = "Telekom Browser :: Verbinden...";
-                      while(Programtic.zähler == 0)
+                      while(CoreClass.zähler == 0)
                       {
                           punkte2 += ".";
                           Console.WriteLine("Verbindung wird aufgebaut"+punkte2);
                           System.Threading.Thread.Sleep(1000);
-                          if (Programtic.zähler == 0) 
+                          if (CoreClass.zähler == 0) 
                           {
                               Console.Clear();
                           }

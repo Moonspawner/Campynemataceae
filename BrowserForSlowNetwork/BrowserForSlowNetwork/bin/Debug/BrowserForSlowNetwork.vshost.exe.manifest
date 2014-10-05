@@ -15,16 +15,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          UAC Manifest Options
-          If you want to change the Windows User Account Control level replace the 
-          requestedExecutionLevel node with one of the following.
+          UAC-Manifestoptionen
+          Wenn Sie die Zugangsebene für das Windows-Benutzerkonto ändern möchten, ersetzen Sie den 
+          requestedExecutionLevel-Knoten durch eines der folgenden Elemente.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         If you want to utilize File and Registry Virtualization for backward 
-         compatibility then delete the requestedExecutionLevel node.
+         Löschen Sie den requestedExecutionLevel-Knoten, wenn Sie 
+         zum Gewährleisten der Abwärtskompatibilität die Datei- und Registrierungsvirtualisierung verwenden möchten.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BrowserForSlowNetwork.exe" size="54272">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BrowserForSlowNetwork.exe" size="54784">
       <assemblyIdentity name="BrowserForSlowNetwork" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nlVVTutZ5RLJMqyhcPcOy/bDI03Y1H5WPZwm9torSuk=</dsig:DigestValue>
+        <dsig:DigestValue>Jv6cwkJbPQf4DBIptunH3SYKxU6+jhXjR5tNHub6CGM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -82,6 +82,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>rujA7LS7S5kmZCMfiwtVZsg9WbpdkC95fyMFBOfYDpQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Infos für das Team\Was Kommt als Nächstes.txt" size="399">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>d82f62HCYR1bY/BAUIkaPlFvdsi/7sqY1kDuBMjVmxg=</dsig:DigestValue>
     </hash>
   </file>
   <file name="modem.wav" size="4194150">
