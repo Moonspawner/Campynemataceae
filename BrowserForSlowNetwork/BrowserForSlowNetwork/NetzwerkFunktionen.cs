@@ -22,22 +22,41 @@ namespace DSLBrowser
                 NameServerBekommenURI = "";
             }
             Console.WriteLine("Versuche zu Nameserver zu verbinden...");
-            NameServerFileSpace = new System.Net.WebClient().DownloadString(NameServerIP);
-            Console.WriteLine(NameServerFileSpace);
+            try
+            {
+                try
+                {
+                    NameServerFileSpace = new System.Net.WebClient().DownloadString("http://192.168.0.106/tknameserver/standart.tkn");
+
+                }
+                catch
+                {
+                    NameServerFileSpace = new System.Net.WebClient().DownloadString(NameServerIP);
+                }
+            }
+            catch
+            {
+                Console.Clear();
+                Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
+                Console.WriteLine("    ║                 Keine Verbindung zum Nameserver                     ║");
+                Console.WriteLine("    ║                                                                     ║");
+                Console.WriteLine("    ║                       Nochmal Probieren?                            ║");
+                Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
+                Console.ReadKey();
+                Console.Clear();
+                CoreClass.Reload();
+            }
+
+                Console.WriteLine(NameServerFileSpace);
             Console.ReadKey();
-
-
-
-
-
         }
 
         public static void Aufrufen()
         {
             Console.Clear();
-            Console.Title = "Telekom Browser :: StartPage";
+            Console.Title = "TK-Browser :: StartPage";
             Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
-            Console.WriteLine("    ║Der Telekom Browser - Surfen Sie auch mit einer langsamen Verbindung.║");
+            Console.WriteLine("    ║   Der TK-Browser - Surfen Sie auch mit einer langsamen Verbindung   ║");
             Console.WriteLine("    ║                                                                     ║");
             Console.WriteLine("    ║Geben Sie bitte die Datei ein, die Sie öffnen möchten.               ║");
             Console.WriteLine("    ║Mit 'Lesezeichen' öffnen sie die Lesezeichen-Menü.                   ║");

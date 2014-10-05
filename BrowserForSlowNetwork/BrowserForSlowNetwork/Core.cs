@@ -46,7 +46,7 @@ namespace DSLBrowser
             skripttimer = true;
             skriptausfüren = true;
             LoadPlugins();
-            Console.Title = "Telekom Browser :: StartPage";
+            Console.Title = "TK-Browser :: StartPage";
             NetzwerkFunktionen.NameServerConnect();
             NetzwerkFunktionen.Aufrufen();
             NetzwerkFunktionen.Downloader();
