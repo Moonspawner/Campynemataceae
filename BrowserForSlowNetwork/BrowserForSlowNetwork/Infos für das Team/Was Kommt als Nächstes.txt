@@ -7,3 +7,9 @@ Netzwerkteil in Neue .cs auslagern
 
 
 Client -> Nameserver ->(IPliste) -> Client -> Server mit namen Steph -> Client
+
+
+//////Standart Form
+                                                             Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
+                                                             Console.WriteLine("    ║                                                                     ║");
+                                                             Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");

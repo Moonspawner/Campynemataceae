@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BrowserForSlowNetwork.exe" size="55296">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BrowserForSlowNetwork.exe" size="55808">
       <assemblyIdentity name="BrowserForSlowNetwork" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>a35gbbtUU6ZTNcovvhxlwcLlq4wuBURDLCVlurWAM74=</dsig:DigestValue>
+        <dsig:DigestValue>6JaFRSmIqoJy3RbMTlFidUd/fPWgtOeZLV95CiieUdI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -84,13 +84,13 @@
       <dsig:DigestValue>rujA7LS7S5kmZCMfiwtVZsg9WbpdkC95fyMFBOfYDpQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Infos für das Team\Was Kommt als Nächstes.txt" size="399">
+  <file name="Infos für das Team\Was Kommt als Nächstes.txt" size="1192">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>d82f62HCYR1bY/BAUIkaPlFvdsi/7sqY1kDuBMjVmxg=</dsig:DigestValue>
+      <dsig:DigestValue>FU9G26KG48inLIb6TEqmncISQvps/DzrYXULwiPVtY8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="modem.wav" size="4194150">

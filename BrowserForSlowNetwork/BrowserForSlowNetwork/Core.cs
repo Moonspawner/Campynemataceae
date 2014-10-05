@@ -47,7 +47,6 @@ namespace DSLBrowser
             skriptausfüren = true;
             LoadPlugins();
             Console.Title = "TK-Browser :: StartPage";
-            NetzwerkFunktionen.NameServerConnect();
             NetzwerkFunktionen.Aufrufen();
             NetzwerkFunktionen.Downloader();
             Tags();
@@ -97,6 +96,7 @@ namespace DSLBrowser
                 if (zeile.Trim() == "</head>")
                 {
                     inhead = false;
+                    continue;
                 }
                 if (inhead == true)
                 {

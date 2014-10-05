@@ -53,6 +53,8 @@ namespace DSLBrowser
 
         public static void Aufrufen()
         {
+            
+
             Console.Clear();
             Console.Title = "TK-Browser :: StartPage";
             Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
@@ -72,7 +74,7 @@ namespace DSLBrowser
                     break;
                 
             }
-            
+            //NameServerConnect();
             
             if (CoreClass.Eingabe == "")
             {
@@ -107,8 +109,10 @@ namespace DSLBrowser
                                                          }
                                                          else 
                                                          {
-                                                             Console.WriteLine("");
-                                                             Console.WriteLine("Der Client kann sich nicht mit dem Server verbinden. Prüfen sie ihre Internetverbindung und versuchen sie es später nochmal.");
+                                                             Console.WriteLine("    ╔════════════════════════════════════════════════════════════════════════╗");
+                                                             Console.WriteLine("    ║         Der Client kann sich nicht mit dem Server verbinden            ║");
+                                                             Console.WriteLine("    ║ Prüfen sie ihre Internetverbindung und versuchen sie es später nochmal ║");
+                                                             Console.WriteLine("    ╚════════════════════════════════════════════════════════════════════════╝");
                                                              CoreClass.zähler = 1;
                                                              CoreClass.tester2 = 1;
                                                              Console.ReadLine();
@@ -158,7 +162,11 @@ namespace DSLBrowser
                                                      {
                                                          Console.Clear();
                                                          Console.Title = "Telekom Browser :: Fehler";
-                                                         Console.WriteLine("Die Datei konnte nicht gefunden werden. Bitte überprüfen sie ihre Eingabe.");
+                                                         Console.WriteLine("");
+                                                         Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
+                                                         Console.WriteLine("    ║                Die Datei konnte nicht gefunden werden               ║");
+                                                         Console.WriteLine("    ║                  Bitte überprüfen sie ihre Eingabe                  ║");
+                                                         Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
                                                          player.Stop();
                                                          CoreClass.zähler = 1;
                                                          CoreClass.tester = 1;
