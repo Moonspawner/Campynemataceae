@@ -4,14 +4,12 @@ using System.Net.NetworkInformation;
 using System.Threading.Tasks;
 using BrowserForSlowNetwork;
 
-namespace DSLBrowser
+namespace BrowserForSlowNetwork
 {
     static class NetzwerkFunktionen
     {
         public static string URL = "";
         private static string punkte2 = "..";
-        public static bool IfFinishd;
-        public static string dots;
 
 
             public static string NameServerIP = "http://alexmitter.tk/tknameserver/standart.tkn";
@@ -24,37 +22,17 @@ namespace DSLBrowser
                 NameServerBekommenURI = "";
             }
             Console.WriteLine("Versuche zu Nameserver zu verbinden...");
-
             try
-            {
-            Parallel.Invoke(new Action[]{()=>{
-                while(IfFinishd==true)
-                {
-                    Console.WriteLine("Versuche zu Nameserver zu verbinden.", dots);
-                    dots = dots + ".";
-                    
-                }
-
-
-                },()=>{
-                    try
             {
                 try
                 {
                     NameServerFileSpace = new System.Net.WebClient().DownloadString("http://192.168.0.106/tknameserver/standart.tkn");
-                    IfFinishd = false;
 
                 }
                 catch
                 {
                     NameServerFileSpace = new System.Net.WebClient().DownloadString(NameServerIP);
-                    IfFinishd = false;
-
                 }
-                        
-            }
-                    }});
-
             }
             catch
             {
@@ -66,11 +44,10 @@ namespace DSLBrowser
                 Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
                 Console.ReadKey();
                 Console.Clear();
-                CoreClass.Reload();
+                CoreTick.RestartCore();
             }
 
-
-            Console.WriteLine(NameServerFileSpace);
+                Console.WriteLine(NameServerFileSpace);
             Console.ReadKey();
         }
 
@@ -89,25 +66,13 @@ namespace DSLBrowser
             Console.Write("    >> ");
             CoreClass.Eingabe = Console.ReadLine();
             //Prüft ob die Datei mit einem / endet, wenn ja leitet er auf die index.txt weiter
-            switch(CoreClass.Eingabe){
-                case"about:us":
-                    About.ÜberUns();
-                    break;
-                default:
-                    break;
-                
-            }
-            //NameServerConnect();
-            
+
+            StandartPages.EingangsSwitchString = CoreClass.Eingabe + "";
+            StandartPages.EingangsSwitch();
+
             if (CoreClass.Eingabe == "")
             {
                 CoreClass.Eingabe = "index";
-            }
-            if (CoreClass.Eingabe == "about:us")
-            {
-
-                About.ÜberUns();
-                Aufrufen();
             }
             else if (CoreClass.Eingabe == "Lesezeichen" | CoreClass.Eingabe == "lesezeichen")
             {

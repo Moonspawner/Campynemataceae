@@ -15,7 +15,7 @@ using System.Media;
 using System.Diagnostics;
 
 
-namespace DSLBrowser
+namespace BrowserForSlowNetwork
 {
     static class CoreClass
     {
@@ -37,21 +37,16 @@ namespace DSLBrowser
         [STAThread]
         public static void Main(string[] args)
         {
-            Reload();
+            CoreTick.StartCore();
         }
 
 
-        public static void Reload()
+        public static void Init()
         {
             skripttimer = true;
             skriptausfüren = true;
             LoadPlugins();
             Console.Title = "TK-Browser :: StartPage";
-            NetzwerkFunktionen.Aufrufen();
-            NetzwerkFunktionen.Downloader();
-            Tags();
-            Ausgabe();
-            CoreClass.Reload();
         }
 
         public static void Ausgabe()
@@ -299,7 +294,8 @@ namespace DSLBrowser
                 Console.Clear();
                 Console.WriteLine("Fehler beim Schreiben der Skript Datei, bitte Kontaktieren sie den Administrator");
                 Console.ReadKey();
-                Reload();
+                CoreTick.RestartCore();
+
             }
         }
         public static bool skripttimer;

@@ -78,11 +78,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.cs" />
+    <Compile Include="CoreTick.cs" />
     <Compile Include="Lesezeichen.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="IPlugin.cs" />
     <Compile Include="NetzwerkFunktionen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StandartPages.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

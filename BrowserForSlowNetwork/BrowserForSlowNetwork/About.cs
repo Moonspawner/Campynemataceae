@@ -12,8 +12,8 @@ namespace BrowserForSlowNetwork
         public static void ÜberUns()
         {
             Console.Clear();
-            Console.Title = "Telekom Browser :: Über Uns";
-            Console.WriteLine("Telekom Browser / Browser for Slow Network");
+            Console.Title = "TK-Browser :: Über Uns";
+            Console.WriteLine("TK-Browser / Browser for Slow Network");
             Console.WriteLine("");
             Console.WriteLine("Entwickelt von Alexmitter, PlaySteph310 und xDevil123");
             Console.WriteLine("Alexmitter - GitHub: http://github.com/Alexmitter");
