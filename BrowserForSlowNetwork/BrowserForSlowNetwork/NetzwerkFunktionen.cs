@@ -53,16 +53,35 @@ namespace BrowserForSlowNetwork
 
         public static void Aufrufen()
         {
-            
+            Console.WriteLine("    ║Geben Sie bitte die Datei ein, die Sie öffnen möchten.                ║");
+            Console.WriteLine("    ║Mit 'Lesezeichen' öffnen sie die Lesezeichen-Menü.                    ║"); 
 
             Console.Clear();
+            System.Threading.Thread.Sleep(50);
             Console.Title = "TK-Browser :: StartPage";
-            Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
-            Console.WriteLine("    ║   Der TK-Browser - Surfen Sie auch mit einer langsamen Verbindung   ║");
-            Console.WriteLine("    ║                                                                     ║");
-            Console.WriteLine("    ║Geben Sie bitte die Datei ein, die Sie öffnen möchten.               ║");
-            Console.WriteLine("    ║Mit 'Lesezeichen' öffnen sie die Lesezeichen-Menü.                   ║");
-            Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
+            Console.WriteLine("    ╔══════════════════════════════════════════════════════════════════════╗"); 
+            Console.WriteLine("    ║   Der TK-Browser - Surfen Sie auch mit einer langsamen Verbindung    ║");
+            Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║");
+            Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣");
+            Console.WriteLine("    ║Lesezeichen                                                           ║");
+            Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣"); 
+            Console.WriteLine("    ║Geben Sie bitte die Datei ein, die Sie öffnen möchten.                ║");
+            Console.WriteLine("    ║Mit 'Lesezeichen' öffnen sie die Lesezeichen-Menü.                    ║"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║");
+            Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║Bitte URI Eingeben                                                    ║"); 
+            Console.WriteLine("    ╚══════════════════════════════════════════════════════════════════════╝");
             Console.Write("    >> ");
             CoreClass.Eingabe = Console.ReadLine();
             //Prüft ob die Datei mit einem / endet, wenn ja leitet er auf die index.txt weiter

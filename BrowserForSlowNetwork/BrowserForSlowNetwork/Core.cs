@@ -45,7 +45,7 @@ namespace BrowserForSlowNetwork
         {
             skripttimer = true;
             skriptausfüren = true;
-            LoadPlugins();
+            //LoadPlugins();
             Console.Title = "TK-Browser :: StartPage";
         }
 
