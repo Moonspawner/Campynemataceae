@@ -18,6 +18,8 @@ namespace BrowserForSlowNetwork
 {
     class CoreTick
     {
+        static string FehlerCode;
+
         public static void StartCore()
         {
             Tick();
@@ -31,12 +33,113 @@ namespace BrowserForSlowNetwork
 
         static void Tick()
         {
-            CoreClass.Init();
-            NetzwerkFunktionen.Aufrufen();
-            NetzwerkFunktionen.Downloader();
-            CoreClass.Tags();
-            CoreClass.Ausgabe();
+            try
+            {
+                CoreClass.Init();
+            }
+            catch
+            {
+                FehlerCode = "Erzeugen der Program Variablen";
+                TickfehlerAusgabe();
+            }
+
+            try
+            {
+                NetzwerkFunktionen.Aufrufen();
+            }
+            catch
+            {
+                FehlerCode = "Starten wichtiger Browser Komponeten";
+                TickfehlerAusgabe();
+            }
+
+            try
+            {
+                NetzwerkFunktionen.Downloader();
+            }
+            catch
+            {
+                FehlerCode = "Aufrufen des Netzwerkcodes";
+                TickfehlerAusgabe();
+            }
+
+            try
+            {
+                CoreClass.Tags();
+            }
+            catch
+            {
+                FehlerCode = "Lesen des Seitencodes";
+                TickfehlerAusgabe();
+            }
+
+            try
+            {
+                CoreClass.Ausgabe();
+            }
+            catch
+            {
+                FehlerCode = "Ausgabe der Seitenkomponenten";
+                TickfehlerAusgabe();
+            }
+
             RestartCore();
+        }
+
+        static void TickfehlerAusgabe()
+        {
+            switch (FehlerCode)
+            {
+                case "Erzeugen der Program Variablen":
+                    Console.Clear();
+                    Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
+                    Console.WriteLine("    ║                  Schwerer fehler im Browser Tick                    ║");
+                    Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
+                    Console.WriteLine("Fehler: ", FehlerCode);
+                    Console.ReadKey();
+
+                    break;
+                case "Starten wichtiger Browser Komponeten":
+                    Console.Clear();
+                    Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
+                    Console.WriteLine("    ║                  Schwerer fehler im Browser Tick                    ║");
+                    Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
+                    Console.WriteLine("Fehler: ", FehlerCode);
+                    Console.ReadKey();
+
+                    break;
+                case "Aufrufen des Netzwerkcodes":
+                    Console.Clear();
+                    Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
+                    Console.WriteLine("    ║                  Schwerer fehler im Browser Tick                    ║");
+                    Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
+                    Console.WriteLine("Fehler: ", FehlerCode);
+
+                    Console.ReadKey();
+
+                    break;
+                case "Lesen des Seitencodes":
+                    Console.Clear();
+                    Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
+                    Console.WriteLine("    ║                  Schwerer fehler im Browser Tick                    ║");
+                    Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
+                    Console.WriteLine("Fehler: ", FehlerCode);
+                    Console.ReadKey();
+
+                    break;
+                case "Ausgabe der Seitenkomponenten":
+                    Console.Clear();
+                    Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
+                    Console.WriteLine("    ║                  Schwerer fehler im Browser Tick                    ║");
+                    Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
+                    Console.WriteLine("Fehler: ", FehlerCode);
+                    Console.ReadKey();
+                    break;
+                default:
+                    break;
+                    RestartCore();
+
+            }
         }
     }
 }
