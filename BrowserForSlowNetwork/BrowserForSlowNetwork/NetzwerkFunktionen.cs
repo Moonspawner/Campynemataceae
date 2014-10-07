@@ -53,9 +53,6 @@ namespace BrowserForSlowNetwork
 
         public static void Aufrufen()
         {
-            Console.WriteLine("    ║Geben Sie bitte die Datei ein, die Sie öffnen möchten.                ║");
-            Console.WriteLine("    ║Mit 'Lesezeichen' öffnen sie die Lesezeichen-Menü.                    ║"); 
-
             Console.Clear();
             System.Threading.Thread.Sleep(50);
             Console.Title = "TK-Browser :: StartPage";

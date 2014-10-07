@@ -205,6 +205,7 @@ namespace BrowserForSlowNetwork
                     Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
                     Console.Write("                                     >");
                     Sicherheitsschranke = Console.ReadLine();
+                    Console.Clear();
 
 
                     if (Sicherheitsschranke == "b")
