@@ -58,7 +58,8 @@ namespace BrowserForSlowNetwork
             Console.Clear();
         }
 
-
+        public static bool inbatch;
+        public static bool tellnoskript;
         public static string CodeInDatei;
         public static void Tags()
         {
@@ -132,6 +133,31 @@ namespace BrowserForSlowNetwork
                     //Schinken
                     if (incode2 == true)
                     {
+
+                        if (zeile.Trim() == "<skriptIO=true>")
+                        {
+                            tellnoskript = true;
+                            continue;
+                        }
+
+                        if (zeile.Trim() == "</skriptIO=false>")
+                        {
+                            tellnoskript = false;
+                            continue;
+                        }
+                        if (zeile.Trim() == "<skriptIO=false>")
+                        {
+                            tellnoskript = true;
+                            continue;
+                        }
+
+                        if (zeile.Trim() == "</skriptIO=false>")
+                        {
+                            tellnoskript = false;
+                            continue;
+                        }
+
+
                         if (zeile != "<batch>" && zeile != "</batch>")
                         {
                             CodeInDatei = CodeInDatei + zeile + "\n";
@@ -305,9 +331,12 @@ namespace BrowserForSlowNetwork
         {
             if (skriptausfüren == true)
             {
-                Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
-                Console.WriteLine("    ║                           Skript Output                             ║");
-                Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
+                if (tellnoskript != true)
+                {
+                    Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
+                    Console.WriteLine("    ║                           Skript Output                             ║");
+                    Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
+                }
                 var process = new Process();
                 var startinfo = new ProcessStartInfo("cmd.exe", @"/C skript.bat");
                 startinfo.RedirectStandardOutput = true;
@@ -317,9 +346,12 @@ namespace BrowserForSlowNetwork
                 process.Start();
                 process.BeginOutputReadLine();
                 process.WaitForExit();
-                Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
-                Console.WriteLine("    ║                         Skript Output Ende                          ║");
-                Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
+                if (tellnoskript != true)
+                {
+                    Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
+                    Console.WriteLine("    ║                         Skript Output Ende                          ║");
+                    Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
+                }
                 skriptausfüren = false;
             }
         }

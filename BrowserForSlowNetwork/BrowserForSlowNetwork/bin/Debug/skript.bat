@@ -1,2 +1,2 @@
-@echo off
-ping google.de
+		@echo off
+		ping google.de
