@@ -37,7 +37,8 @@ namespace BrowserForSlowNetwork
         [STAThread]
         public static void Main(string[] args)
         {
-            CoreTick.StartCore();
+            OutputBox.Nachricht("hallo");
+            //CoreTick.StartCore();
         }
 
 

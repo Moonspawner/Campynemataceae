@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BrowserForSlowNetwork.exe" size="58880">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BrowserForSlowNetwork.exe" size="59392">
       <assemblyIdentity name="BrowserForSlowNetwork" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jwcbcBXvckJ+wK+t+cyM+djUAbOD0M7k/eG80NRT4AQ=</dsig:DigestValue>
+        <dsig:DigestValue>06hWTT0OZwaNyMFLxXbnhf+lHlmgy/sFXhUbCd8hiIE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
