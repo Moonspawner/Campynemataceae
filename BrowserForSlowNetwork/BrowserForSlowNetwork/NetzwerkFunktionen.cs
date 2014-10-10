@@ -40,7 +40,7 @@ namespace BrowserForSlowNetwork
                 Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
                 Console.WriteLine("    ║                 Keine Verbindung zum Nameserver                     ║");
                 Console.WriteLine("    ║                                                                     ║");
-                Console.WriteLine("    ║                       Nochmal Probieren?                            ║");
+                Console.WriteLine("    ║                           Wiederholen?                              ║");
                 Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
                 Console.ReadKey();
                 Console.Clear();

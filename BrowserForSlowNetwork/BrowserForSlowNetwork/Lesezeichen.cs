@@ -12,6 +12,8 @@ namespace BrowserForSlowNetwork
     {
         //Nach Brocken
         public static Dictionary<ConsoleKey, string> dictionary = new Dictionary<ConsoleKey, string>();
+        public static Dictionary<ConsoleKey, string> dictionarynew = new Dictionary<ConsoleKey, string>();
+        public static int zähler = 112;
         public static void Menü()
         {
             Console.Clear();
@@ -43,17 +45,25 @@ namespace BrowserForSlowNetwork
             Console.WriteLine("");
             if (File.Exists("bookmarks.json"))
             {
+                var dictionary = JsonConvert.DeserializeObject<Dictionary<ConsoleKey, string>>("bookmarks.json");
             }
             else
             {
-                File.WriteAllText("bookmarks.json", "");
+                while(zähler<=123)
+                {
+                    ConsoleKey zählerkey = (ConsoleKey)zähler;
+                    dictionarynew.Add(zählerkey, "");
+                    zähler++;
+                }
+                string jsonnew = JsonConvert.SerializeObject(dictionarynew, Formatting.Indented);
+                File.WriteAllText("bookmarks.json", jsonnew);
             }
             StreamReader sr = new StreamReader("bookmarks.json");
             var testen = sr.ReadToEnd();
             if (key == ConsoleKey.F1)
             {
                 Console.WriteLine("Ihr Tastendruck: " + key);
-                if (testen.Contains("F1"))
+                /*if (testen.Contains("F1"))
                 {
                     Console.Clear();
                     Console.WriteLine("Die Taste " + key + " wurde schon belegt. Möchten sie die Taste neu setzen?");
@@ -67,9 +77,9 @@ namespace BrowserForSlowNetwork
                             Neu();
                             break;
                     }
-                }
+                }*/
                 Console.WriteLine("Geben Sie jetzt den Shortcut an:");
-                dictionary.Add(ConsoleKey.F1, Console.ReadLine());
+                string text = Console.ReadLine();
             }
             else if (key == ConsoleKey.F2)
             {
@@ -169,7 +179,14 @@ namespace BrowserForSlowNetwork
         public static void Beenden()
         {
             string json = JsonConvert.SerializeObject(dictionary, Formatting.Indented);
-            File.WriteAllText("bookmarks.json", json);
+            if (File.Exists("bookmarks.json"))
+            {
+
+            }
+            else
+            {
+                File.WriteAllText("bookmarks.json", json);
+            }
         }
     }
 }

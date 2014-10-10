@@ -95,7 +95,7 @@ namespace BrowserForSlowNetwork
                     Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
                     Console.WriteLine("    ║                  Schwerer fehler im Browser Tick                    ║");
                     Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
-                    Console.WriteLine("Fehler: ", );
+                    Console.WriteLine("Fehler: ", FehlerCode);
                     Console.ReadKey();
 
                     break;
