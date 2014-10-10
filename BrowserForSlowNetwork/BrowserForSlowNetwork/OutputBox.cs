@@ -21,8 +21,6 @@ namespace BrowserForSlowNetwork
         public static string NachrichtOutput;
         public static void Nachricht(string Nachricht2)
         {
-            Nachricht2 = "Hallo das ist der text den ich als output box haben möchte";
-
             int Länge = Nachricht2.Length;
             string Oben;
             string Mitte;
@@ -39,20 +37,16 @@ namespace BrowserForSlowNetwork
                 Unten = Unten + "═";
                 Länge--;
             }
-            Oben = Oben +   "╗";
-            Unten = Unten + "╝";
+            Oben = Oben +   "═╗";
+            Unten = Unten + "═╝";
             Mitte = "    ║" + " " + Nachricht2 + " " + "║";
 
             NachrichtOutput = Oben + "\n" + Mitte + "\n" + Unten;
+        }
 
+        public static void Ausgabe()
+        {
             Console.WriteLine(NachrichtOutput);
-            Console.ReadKey();
-
-
-
-
-
-
         }
     }
 }

@@ -18,7 +18,6 @@ C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSl
 C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.exe
 C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.pdb
 C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.csprojResolveAssemblyReference.cache
 C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.exe.manifest
 C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.application

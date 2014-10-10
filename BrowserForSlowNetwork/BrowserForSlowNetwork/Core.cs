@@ -37,8 +37,7 @@ namespace BrowserForSlowNetwork
         [STAThread]
         public static void Main(string[] args)
         {
-            OutputBox.Nachricht("hallo");
-            //CoreTick.StartCore();
+            CoreTick.StartCore();
         }
 
 
@@ -67,6 +66,7 @@ namespace BrowserForSlowNetwork
             bool incode = false;
             bool inhead = false;
             bool incode2 = false;
+            bool inbox = false;
 
             var tags = new List<string>();
 
@@ -129,6 +129,22 @@ namespace BrowserForSlowNetwork
                     if (zeile.Trim() == "</beep>")
                     {
 
+                    }
+                    if (zeile.Trim() == "<box>")
+                    {
+                        inbox = true;
+                        continue;
+
+                    }
+                    if (zeile.Trim() == "</box>")
+                    {
+                        inbox = false;
+                        continue;
+                    }
+                    if (inbox == true)
+                    {
+                        OutputBox.Nachricht(zeile);
+                        continue;
                     }
 
                     //Schinken
@@ -207,6 +223,8 @@ namespace BrowserForSlowNetwork
                     Console.WriteLine(tag);
                 }
             }
+            /*//////////////////////////////////////*/
+            OutputBox.Ausgabe();
             
         }
         public static string WirklichAusfüren;
