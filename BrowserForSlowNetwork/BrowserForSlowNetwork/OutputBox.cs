@@ -28,8 +28,16 @@ namespace BrowserForSlowNetwork
             Länge++;
             Länge++;
 
-            Oben =  "    ╔";
-            Unten = "    ╚";
+            Oben =  "╔";
+            Unten = "╚";
+
+            if (Länge > 78)
+            {
+                Console.WriteLine(" Fehler beim Zeichnen der Box, Zu Viele zeichen im Box Tag, suche im Skript nach <box>");
+                Console.ReadKey();
+                CoreTick.RestartCore();
+                return;
+            }
 
             while(Länge > 0)
             {
@@ -39,7 +47,7 @@ namespace BrowserForSlowNetwork
             }
             Oben = Oben +   "═╗";
             Unten = Unten + "═╝";
-            Mitte = "    ║" + " " + Nachricht2 + " " + "║";
+            Mitte = "║" + " " + Nachricht2 + " " + " ║";
 
             NachrichtOutput = Oben + "\n" + Mitte + "\n" + Unten;
         }

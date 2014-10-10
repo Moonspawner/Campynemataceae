@@ -67,6 +67,11 @@ namespace BrowserForSlowNetwork
             bool inhead = false;
             bool incode2 = false;
             bool inbox = false;
+            bool inbeep = false;
+            int beepcounter = 1;
+            int beep = 1;
+            int beep2 = 0;
+            bool finishbeep = false;
 
             var tags = new List<string>();
 
@@ -124,11 +129,13 @@ namespace BrowserForSlowNetwork
 
                     if (zeile.Trim() == "<beep>")
                     {
-
+                        inbeep = true;
+                        continue;
                     }
                     if (zeile.Trim() == "</beep>")
                     {
-
+                        inbeep = false;
+                        continue;
                     }
                     if (zeile.Trim() == "<box>")
                     {
@@ -148,7 +155,26 @@ namespace BrowserForSlowNetwork
                     }
 
                     //Schinken
-                    if (incode2 == true)
+                    if(inbeep == true)
+                    {
+                        if (beepcounter == 1)
+                        {
+                            beep1 = Int32.Parse(zeile);
+                            beepcounter++;
+                            continue;
+                        }
+                        if (beepcounter == 2)
+                        {
+                            finishbeep = true;
+                            beep2 = Int32.Parse(zeile);
+                        }
+                        if (finishbeep == true)
+                        {
+                            Console.Beep(beep1, beep2);
+                        }
+                        continue;
+                    }
+                    if(incode2 == true)
                     {
 
                         if (zeile.Trim() == "<skriptIO=true>")
@@ -461,5 +487,7 @@ namespace BrowserForSlowNetwork
 
 
         public static string Sicherheistschranke { get; set; }
+
+        public static int beep1 { get; set; }
     }
 }

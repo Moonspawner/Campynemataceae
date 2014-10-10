@@ -136,8 +136,8 @@ namespace BrowserForSlowNetwork
                     Console.ReadKey();
                     break;
                 default:
-                    break;
                     RestartCore();
+                    break;
 
             }
         }
