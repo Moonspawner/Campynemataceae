@@ -3,7 +3,12 @@
 ////////////////////////////////////////////////////////////////////////////
 
 Haupt server mit Nahmensliste mit IP´s
-Netzwerkteil in Neue .cs auslagern
+Geamcht(Netzwerkteil in Neue .cs auslagern)
+
+
+
+
+
 
 
 Client -> Nameserver ->(IPliste) -> Client -> Server mit namen Steph -> Client

@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>x9EsHcwWAUionsBNkNtr7BjbQfVXVDSuMGLH5LcC0FE=</dsig:DigestValue>
+        <dsig:DigestValue>meNgDH1tThKfV+0iZpHlgtjK0TfPqSj38gZeE923LDY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -84,13 +84,13 @@
       <dsig:DigestValue>rujA7LS7S5kmZCMfiwtVZsg9WbpdkC95fyMFBOfYDpQ=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Infos für das Team\Was Kommt als Nächstes.txt" size="1009">
+  <file name="Infos für das Team\Was Kommt als Nächstes.txt" size="1028">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>oDRRob2gMRjWVG3fZGsTbLNMQjd5BSPmKqDc5aU9550=</dsig:DigestValue>
+      <dsig:DigestValue>s+67LNePdCEiF5rUyp/xPVAgvD8e/63+0lKH9EE3qys=</dsig:DigestValue>
     </hash>
   </file>
   <file name="modem.wav" size="4194150">
