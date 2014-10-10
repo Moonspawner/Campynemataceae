@@ -21,7 +21,7 @@ namespace BrowserForSlowNetwork
             Console.WriteLine("");
             Console.WriteLine("Beenden, Neu");
             var prüfen = Console.ReadLine();
-            switch(prüfen)
+            switch (prüfen)
             {
                 case "beenden":
                     Beenden();
@@ -41,6 +41,13 @@ namespace BrowserForSlowNetwork
             Console.WriteLine("Drücken Sie einer der F Tasten.");
             ConsoleKey key = Console.ReadKey().Key;
             Console.WriteLine("");
+            if (File.Exists("bookmarks.json"))
+            {
+            }
+            else
+            {
+                File.WriteAllText("bookmarks.json", "");
+            }
             StreamReader sr = new StreamReader("bookmarks.json");
             var testen = sr.ReadToEnd();
             if (key == ConsoleKey.F1)
@@ -49,10 +56,10 @@ namespace BrowserForSlowNetwork
                 if (testen.Contains("F1"))
                 {
                     Console.Clear();
-                    Console.WriteLine("Die Taste "+key+" wurde schon belegt. Möchten sie die Taste neu setzen?");
+                    Console.WriteLine("Die Taste " + key + " wurde schon belegt. Möchten sie die Taste neu setzen?");
                     Console.WriteLine("J = Ja; N = Nein");
                     var prüfen = Console.ReadLine();
-                    switch(prüfen)
+                    switch (prüfen)
                     {
                         case "j":
                             break;
@@ -140,7 +147,7 @@ namespace BrowserForSlowNetwork
             }
             Console.WriteLine("Möchten Sie eine weitere Taste setzen? (J = Ja; N = Nein)");
             var prüfen2 = Console.ReadLine();
-            switch(prüfen2)
+            switch (prüfen2)
             {
                 case "N":
                     Menü();
@@ -162,7 +169,7 @@ namespace BrowserForSlowNetwork
         public static void Beenden()
         {
             string json = JsonConvert.SerializeObject(dictionary, Formatting.Indented);
-            File.WriteAllText("lesezeichen.json", json);
+            File.WriteAllText("bookmarks.json", json);
         }
     }
 }
