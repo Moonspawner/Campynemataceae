@@ -147,6 +147,7 @@ namespace BrowserForSlowNetwork
                     if (zeile.Trim() == "</box>")
                     {
                         inbox = false;
+                        OutputBox.Ausgabe();
                         continue;
                     }
                     if (inbox == true)
@@ -251,7 +252,6 @@ namespace BrowserForSlowNetwork
                 }
             }
             /*//////////////////////////////////////*/
-            OutputBox.Ausgabe();
             
         }
         public static string WirklichAusfüren;

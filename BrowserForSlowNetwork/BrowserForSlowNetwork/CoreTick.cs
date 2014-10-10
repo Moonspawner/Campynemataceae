@@ -37,7 +37,7 @@ namespace BrowserForSlowNetwork
             {
                 CoreClass.Init();
             }
-            catch
+            catch(Exception ex1)
             {
                 FehlerCode = "Erzeugen der Program Variablen";
                 TickfehlerAusgabe();
@@ -47,7 +47,7 @@ namespace BrowserForSlowNetwork
             {
                 NetzwerkFunktionen.Aufrufen();
             }
-            catch
+            catch (Exception ex2)
             {
                 FehlerCode = "Starten wichtiger Browser Komponeten";
                 TickfehlerAusgabe();
@@ -57,7 +57,7 @@ namespace BrowserForSlowNetwork
             {
                 NetzwerkFunktionen.Downloader();
             }
-            catch
+            catch (Exception ex3)
             {
                 FehlerCode = "Aufrufen des Netzwerkcodes";
                 TickfehlerAusgabe();
@@ -67,7 +67,7 @@ namespace BrowserForSlowNetwork
             {
                 CoreClass.Tags();
             }
-            catch
+            catch (Exception ex4)
             {
                 FehlerCode = "Lesen des Seitencodes";
                 TickfehlerAusgabe();
@@ -77,12 +77,12 @@ namespace BrowserForSlowNetwork
             {
                 CoreClass.Ausgabe();
             }
-            catch
+            catch (Exception ex5)
             {
                 FehlerCode = "Ausgabe der Seitenkomponenten";
                 TickfehlerAusgabe();
             }
-
+            
             RestartCore();
         }
 
@@ -95,7 +95,7 @@ namespace BrowserForSlowNetwork
                     Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
                     Console.WriteLine("    ║                  Schwerer fehler im Browser Tick                    ║");
                     Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
-                    Console.WriteLine("Fehler: ", FehlerCode);
+                    Console.WriteLine("Fehler: ", );
                     Console.ReadKey();
 
                     break;
