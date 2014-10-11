@@ -39,7 +39,7 @@ namespace BrowserForSlowNetwork
             }
             catch(Exception ex1)
             {
-                FehlerCode = "Erzeugen der Program Variablen";
+                FehlerCode = ex1.ToString();
                 TickfehlerAusgabe();
             }
 
@@ -49,7 +49,7 @@ namespace BrowserForSlowNetwork
             }
             catch (Exception ex2)
             {
-                FehlerCode = "Starten wichtiger Browser Komponeten";
+                FehlerCode = ex2.ToString();
                 TickfehlerAusgabe();
             }
 
@@ -59,7 +59,7 @@ namespace BrowserForSlowNetwork
             }
             catch (Exception ex3)
             {
-                FehlerCode = "Aufrufen des Netzwerkcodes";
+                FehlerCode = ex3.ToString();
                 TickfehlerAusgabe();
             }
 
@@ -69,7 +69,7 @@ namespace BrowserForSlowNetwork
             }
             catch (Exception ex4)
             {
-                FehlerCode = "Lesen des Seitencodes";
+                FehlerCode = ex4.ToString();
                 TickfehlerAusgabe();
             }
 
@@ -79,7 +79,7 @@ namespace BrowserForSlowNetwork
             }
             catch (Exception ex5)
             {
-                FehlerCode = "Ausgabe der Seitenkomponenten";
+                FehlerCode = ex5.ToString();
                 TickfehlerAusgabe();
             }
             
