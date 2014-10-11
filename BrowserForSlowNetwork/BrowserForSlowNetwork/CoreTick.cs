@@ -45,7 +45,7 @@ namespace BrowserForSlowNetwork
 
             try
             {
-                NetzwerkFunktionen.Aufrufen();
+                CoreNetzwerk.Aufrufen();
             }
             catch (Exception ex2)
             {
@@ -55,7 +55,7 @@ namespace BrowserForSlowNetwork
 
             try
             {
-                NetzwerkFunktionen.Downloader();
+                CoreNetzwerk.Downloader();
             }
             catch (Exception ex3)
             {

@@ -82,7 +82,7 @@
     <Compile Include="Lesezeichen.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="IPlugin.cs" />
-    <Compile Include="NetzwerkFunktionen.cs" />
+    <Compile Include="CoreNetzwerk.cs" />
     <Compile Include="OutputBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StandartPages.cs" />

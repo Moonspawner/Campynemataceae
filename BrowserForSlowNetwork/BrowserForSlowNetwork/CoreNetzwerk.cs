@@ -6,7 +6,7 @@ using BrowserForSlowNetwork;
 
 namespace BrowserForSlowNetwork
 {
-    static class NetzwerkFunktionen
+    static class CoreNetzwerk
     {
         public static string URL = "";
         private static string punkte2 = "..";
@@ -53,34 +53,7 @@ namespace BrowserForSlowNetwork
 
         public static void Aufrufen()
         {
-            Console.Clear();
-            System.Threading.Thread.Sleep(50);
-            Console.Title = "TK-Browser :: StartPage";
-            Console.WriteLine("    ╔══════════════════════════════════════════════════════════════════════╗"); 
-            Console.WriteLine("    ║   Der TK-Browser - Surfen Sie auch mit einer langsamen Verbindung    ║");
-            Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣"); 
-            Console.WriteLine("    ║                                                                      ║"); 
-            Console.WriteLine("    ║                                                                      ║"); 
-            Console.WriteLine("    ║                                                                      ║");
-            Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣");
-            Console.WriteLine("    ║Lesezeichen                                                           ║");
-            Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣"); 
-            Console.WriteLine("    ║Geben Sie bitte die Datei ein, die Sie öffnen möchten.                ║");
-            Console.WriteLine("    ║Mit 'Lesezeichen' öffnen sie die Lesezeichen-Menü.                    ║"); 
-            Console.WriteLine("    ║                                                                      ║"); 
-            Console.WriteLine("    ║                                                                      ║"); 
-            Console.WriteLine("    ║                                                                      ║");
-            Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣"); 
-            Console.WriteLine("    ║                                                                      ║"); 
-            Console.WriteLine("    ║                                                                      ║"); 
-            Console.WriteLine("    ║                                                                      ║"); 
-            Console.WriteLine("    ║                                                                      ║"); 
-            Console.WriteLine("    ║                                                                      ║"); 
-            Console.WriteLine("    ║                                                                      ║"); 
-            Console.WriteLine("    ║Bitte URI Eingeben                                                    ║"); 
-            Console.WriteLine("    ╚══════════════════════════════════════════════════════════════════════╝");
-            Console.Write("    >> ");
-            CoreClass.Eingabe = Console.ReadLine();
+            CoreClass.Startscreen();
             //Prüft ob die Datei mit einem / endet, wenn ja leitet er auf die index.txt weiter
 
             StandartPages.EingangsSwitchString = CoreClass.Eingabe + "";
@@ -155,8 +128,9 @@ namespace BrowserForSlowNetwork
                                                      CoreClass.FileSpace = new System.Net.WebClient().DownloadString(URL);
                                                      Console.Clear();
                                                      Console.Title = "";
-                                                     Console.ForegroundColor = ConsoleColor.Green;
-                                                     Console.WriteLine(">> Datei: "+ CoreClass.Eingabe);                //Was soll das darstellen?(nachricht von Alexmitter)
+                                                     Console.ForegroundColor = ConsoleColor.Green;                                                     
+                                                     OutputBox.Nachricht(">> Datei: " + CoreClass.Eingabe);
+                                                     OutputBox.Ausgabe();
                                                      Console.ForegroundColor = ConsoleColor.Gray;
                                                      Console.WriteLine("");
                                                  }

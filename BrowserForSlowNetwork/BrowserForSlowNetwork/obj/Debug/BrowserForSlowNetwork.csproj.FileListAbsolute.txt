@@ -36,3 +36,4 @@ C:\Users\Stephan Höhn\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserF
 C:\Users\Stephan Höhn\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.application
 C:\Users\Stephan Höhn\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.exe
 C:\Users\Stephan Höhn\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.pdb
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\Newtonsoft.Json.xml

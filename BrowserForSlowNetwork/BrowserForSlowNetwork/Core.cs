@@ -41,6 +41,38 @@ namespace BrowserForSlowNetwork
             CoreTick.StartCore();
         }
 
+        public static void Startscreen()
+        {
+            Console.Clear();
+            System.Threading.Thread.Sleep(50);
+            Console.Title = "TK-Browser :: StartPage";
+            Console.WriteLine("    ╔══════════════════════════════════════════════════════════════════════╗"); 
+            Console.WriteLine("    ║   Der TK-Browser - Surfen Sie auch mit einer langsamen Verbindung    ║");
+            Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║");
+            Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣");
+            Console.WriteLine("    ║Lesezeichen                                                           ║");
+            Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣"); 
+            Console.WriteLine("    ║Geben Sie bitte die Datei ein, die Sie öffnen möchten.                ║");
+            Console.WriteLine("    ║Mit 'Lesezeichen' öffnen sie die Lesezeichen-Menü.                    ║"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║");
+            Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║                                                                      ║"); 
+            Console.WriteLine("    ║Bitte URI Eingeben                                                    ║"); 
+            Console.WriteLine("    ╚══════════════════════════════════════════════════════════════════════╝");
+            Console.Write("    >> ");
+            CoreClass.Eingabe = Console.ReadLine();
+        }
+
 
         public static void Init()
         {
