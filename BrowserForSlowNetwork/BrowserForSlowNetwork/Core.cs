@@ -105,6 +105,10 @@ namespace BrowserForSlowNetwork
             int beep = 1;
             int beep2 = 0;
             bool finishbeep = false;
+            bool inhyperlink = false;
+            //List<string> hyperlinkname = new List<string>();
+            //List<string> hyperlink = new List<string>();
+
 
             var tags = new List<string>();
 
@@ -151,6 +155,24 @@ namespace BrowserForSlowNetwork
                 }
                 if(inhead==false)
                 {
+
+                    if (zeile.Trim() == "<link>")
+                    {
+                        inhyperlink = true;
+                        continue;
+                    }
+                    if (zeile.Trim() == "</link>")
+                    {
+                        inhyperlink = false;
+                        continue;
+                    }
+                    if (inhyperlink == true)
+                    {
+
+                    }
+
+
+
                     if (zeile.Trim() == "<text>")
                     {
                         continue;
