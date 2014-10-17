@@ -22,70 +22,81 @@ namespace BrowserForSlowNetwork
 
         public static void StartCore()
         {
-            Tick();
+            Tick(false);
         }
 
         public static void RestartCore()
         {
             Console.Clear();
-            Tick();
+            Tick(false);
         }
 
-        static void Tick()
+        static void Tick(bool force)
         {
-            try
+            if (force == true)
             {
                 CoreClass.Init();
-            }
-            catch(Exception ex1)
-            {
-                FehlerSwitch = 1;
-                FehlerCode = ex1.ToString();
-                TickfehlerAusgabe();
-            }
-
-            try
-            {
                 CoreNetzwerk.Aufrufen();
-            }
-            catch (Exception ex2)
-            {
-                FehlerSwitch = 2;
-                FehlerCode = ex2.ToString();
-                TickfehlerAusgabe();
-            }
-
-            try
-            {
                 CoreNetzwerk.Downloader();
-            }
-            catch (Exception ex3)
-            {
-                FehlerSwitch = 3;
-                FehlerCode = ex3.ToString();
-                TickfehlerAusgabe();
-            }
-
-            try
-            {
                 CoreClass.Tags();
-            }
-            catch (Exception ex4)
-            {
-                FehlerSwitch = 4;
-                FehlerCode = ex4.ToString();
-                TickfehlerAusgabe();
-            }
-
-            try
-            {
                 CoreClass.Ausgabe();
             }
-            catch (Exception ex5)
+            else
             {
-                FehlerSwitch = 5;
-                FehlerCode = ex5.ToString();
+                try
+                {
+                CoreClass.Init();
+                }
+                catch(Exception ex1)
+                {
+                   FehlerSwitch = 1;
+                   FehlerCode = ex1.ToString();
+                   TickfehlerAusgabe();
+                }
+
+                try
+                {
+                    CoreNetzwerk.Aufrufen();
+                }
+                    catch (Exception ex2)
+                {
+                     FehlerSwitch = 2;
+                FehlerCode = ex2.ToString();
                 TickfehlerAusgabe();
+                }
+
+                try
+                {
+                    CoreNetzwerk.Downloader();
+                }
+                catch (Exception ex3)
+                {
+                    FehlerSwitch = 3;
+                    FehlerCode = ex3.ToString();
+                    TickfehlerAusgabe();
+                }
+
+                try
+                {
+                    CoreClass.Tags();
+                }
+                catch (Exception ex4)
+                {
+                    FehlerSwitch = 4;
+                    FehlerCode = ex4.ToString();
+                    TickfehlerAusgabe();
+                }
+
+                try
+                {
+                    CoreClass.Ausgabe();
+                }
+                catch (Exception ex5)
+                {
+                    FehlerSwitch = 5;
+                    FehlerCode = ex5.ToString();
+                    TickfehlerAusgabe();
+                }
             }
             
             RestartCore();
