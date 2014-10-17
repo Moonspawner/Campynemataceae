@@ -45,11 +45,13 @@ namespace BrowserForSlowNetwork
             Console.WriteLine("");
             if (File.Exists("bookmarks.json"))
             {
-                var dictionary = JsonConvert.DeserializeObject<Dictionary<ConsoleKey, string>>("bookmarks.json");
+                var file1 = new StreamReader("bookmarks.json");
+                Dictionary<ConsoleKey, string> dictionary = JsonConvert.DeserializeObject<Dictionary<ConsoleKey, string>>(file1.ReadToEnd());
+                file1.Close();
             }
             else
             {
-                while(zähler<=123)
+                while (zähler <= 123)
                 {
                     ConsoleKey zählerkey = (ConsoleKey)zähler;
                     dictionarynew.Add(zählerkey, "");
@@ -57,9 +59,10 @@ namespace BrowserForSlowNetwork
                 }
                 string jsonnew = JsonConvert.SerializeObject(dictionarynew, Formatting.Indented);
                 File.WriteAllText("bookmarks.json", jsonnew);
+                //file1.Close();
             }
-            StreamReader sr = new StreamReader("bookmarks.json");
-            var testen = sr.ReadToEnd();
+            //StreamReader sr = new StreamReader("bookmarks.json");
+            //var testen = sr.ReadToEnd();
             if (key == ConsoleKey.F1)
             {
                 Console.WriteLine("Ihr Tastendruck: " + key);
@@ -79,73 +82,73 @@ namespace BrowserForSlowNetwork
                     }
                 }*/
                 Console.WriteLine("Geben Sie jetzt den Shortcut an:");
-                string text = Console.ReadLine();
+                dictionary[ConsoleKey.F1] = Console.ReadLine();
             }
             else if (key == ConsoleKey.F2)
             {
                 Console.WriteLine("Ihr Tastendruck: " + key);
                 Console.WriteLine("Geben Sie jetzt den Shortcut an:");
-                dictionary.Add(ConsoleKey.F2, Console.ReadLine());
+                dictionary[ConsoleKey.F2] = Console.ReadLine();
             }
             else if (key == ConsoleKey.F3)
             {
                 Console.WriteLine("Ihr Tastendruck: " + key);
                 Console.WriteLine("Geben Sie jetzt den Shortcut an:");
-                dictionary.Add(ConsoleKey.F3, Console.ReadLine());
+                dictionary[ConsoleKey.F3] = Console.ReadLine();
             }
             else if (key == ConsoleKey.F4)
             {
                 Console.WriteLine("Ihr Tastendruck: " + key);
                 Console.WriteLine("Geben Sie jetzt den Shortcut an:");
-                dictionary.Add(ConsoleKey.F4, Console.ReadLine());
+                dictionary[ConsoleKey.F4] = Console.ReadLine();
             }
             else if (key == ConsoleKey.F5)
             {
                 Console.WriteLine("Ihr Tastendruck: " + key);
                 Console.WriteLine("Geben Sie jetzt den Shortcut an:");
-                dictionary.Add(ConsoleKey.F5, Console.ReadLine());
+                dictionary[ConsoleKey.F5] = Console.ReadLine();
             }
             else if (key == ConsoleKey.F6)
             {
                 Console.WriteLine("Ihr Tastendruck: " + key);
                 Console.WriteLine("Geben Sie jetzt den Shortcut an:");
-                dictionary.Add(ConsoleKey.F6, Console.ReadLine());
+                dictionary[ConsoleKey.F6] = Console.ReadLine();
             }
             else if (key == ConsoleKey.F7)
             {
                 Console.WriteLine("Ihr Tastendruck: " + key);
                 Console.WriteLine("Geben Sie jetzt den Shortcut an:");
-                dictionary.Add(ConsoleKey.F7, Console.ReadLine());
+                dictionary[ConsoleKey.F7] = Console.ReadLine();
             }
             else if (key == ConsoleKey.F8)
             {
                 Console.WriteLine("Ihr Tastendruck: " + key);
                 Console.WriteLine("Geben Sie jetzt den Shortcut an:");
-                dictionary.Add(ConsoleKey.F8, Console.ReadLine());
+                dictionary[ConsoleKey.F8] = Console.ReadLine();
             }
             else if (key == ConsoleKey.F9)
             {
                 Console.WriteLine("Ihr Tastendruck: " + key);
                 Console.WriteLine("Geben Sie jetzt den Shortcut an:");
-                dictionary.Add(ConsoleKey.F9, Console.ReadLine());
+                dictionary[ConsoleKey.F9] = Console.ReadLine();
             }
             else if (key == ConsoleKey.F10)
             {
                 Console.WriteLine("Ihr Tastendruck: " + key);
                 Console.WriteLine("Geben Sie jetzt den Shortcut an:");
-                dictionary.Add(ConsoleKey.F10, Console.ReadLine());
+                dictionary[ConsoleKey.F10] = Console.ReadLine();
             }
             else if (key == ConsoleKey.F11)
             {
                 Console.WriteLine("Ihr Tastendruck: " + key);
                 Console.WriteLine("Geben Sie jetzt den Shortcut an:");
-                dictionary.Add(ConsoleKey.F11, Console.ReadLine());
+                dictionary[ConsoleKey.F11] = Console.ReadLine();
             }
             else if (key == ConsoleKey.F12)
             {
                 Console.WriteLine("Ihr Tastendruck: " + key);
                 Console.WriteLine("Geben Sie jetzt den Shortcut an:");
-                dictionary.Add(ConsoleKey.F12, Console.ReadLine());
+                dictionary[ConsoleKey.F12] = Console.ReadLine();
             }
             else
             {
@@ -156,8 +159,7 @@ namespace BrowserForSlowNetwork
                 Menü();
             }
             Console.WriteLine("Möchten Sie eine weitere Taste setzen? (J = Ja; N = Nein)");
-            var prüfen2 = Console.ReadLine();
-            switch (prüfen2)
+            switch (Console.ReadLine())
             {
                 case "N":
                     Menü();
@@ -181,7 +183,59 @@ namespace BrowserForSlowNetwork
             string json = JsonConvert.SerializeObject(dictionary, Formatting.Indented);
             if (File.Exists("bookmarks.json"))
             {
-
+                if (dictionary[ConsoleKey.F1] == "")
+                {
+                    dictionary[ConsoleKey.F1] = "";
+                }
+                if (dictionary[ConsoleKey.F2] == "")
+                {
+                    dictionary[ConsoleKey.F2] = "";
+                }
+                if (dictionary[ConsoleKey.F3] == "")
+                {
+                    dictionary[ConsoleKey.F3] = "";
+                }
+                if (dictionary[ConsoleKey.F4] == "")
+                {
+                    dictionary[ConsoleKey.F4] = "";
+                }
+                if (dictionary[ConsoleKey.F5] == "")
+                {
+                    dictionary[ConsoleKey.F5] = "";
+                }
+                if (dictionary[ConsoleKey.F6] == "")
+                {
+                    dictionary[ConsoleKey.F6] = "";
+                }
+                if (dictionary[ConsoleKey.F7] == "")
+                {
+                    dictionary[ConsoleKey.F7] = "";
+                }
+                if (dictionary[ConsoleKey.F8] == "")
+                {
+                    dictionary[ConsoleKey.F8] = "";
+                }
+                if (dictionary[ConsoleKey.F9] == "")
+                {
+                    dictionary[ConsoleKey.F9] = "";
+                }
+                if (dictionary[ConsoleKey.F10] == "")
+                {
+                    dictionary[ConsoleKey.F10] = "";
+                }
+                if (dictionary[ConsoleKey.F11] == "")
+                {
+                    dictionary[ConsoleKey.F11] = "";
+                }
+                if (dictionary[ConsoleKey.F12] == "")
+                {
+                    dictionary[ConsoleKey.F12] = "";
+                }
+                if (dictionary[ConsoleKey.F1] == "")
+                {
+                    dictionary[ConsoleKey.F12] = "";
+                }
+                File.WriteAllText("bookmarks.json", json);
             }
             else
             {

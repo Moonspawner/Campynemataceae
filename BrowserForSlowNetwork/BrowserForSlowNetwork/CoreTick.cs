@@ -22,13 +22,13 @@ namespace BrowserForSlowNetwork
 
         public static void StartCore()
         {
-            Tick(false);
+            Tick(true);
         }
 
         public static void RestartCore()
         {
             Console.Clear();
-            Tick(false);
+            Tick(true);
         }
 
         static void Tick(bool force)
