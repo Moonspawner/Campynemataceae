@@ -40,6 +40,8 @@ namespace BrowserForSlowNetwork
                 CoreNetzwerk.Downloader();
                 CoreClass.Tags();
                 CoreClass.Ausgabe();
+                RestartCore();
+                
             }
             else
             {
