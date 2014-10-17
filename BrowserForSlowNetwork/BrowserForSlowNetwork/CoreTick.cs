@@ -39,6 +39,7 @@ namespace BrowserForSlowNetwork
             }
             catch(Exception ex1)
             {
+                FehlerSwitch = 1;
                 FehlerCode = ex1.ToString();
                 TickfehlerAusgabe();
             }
@@ -49,6 +50,7 @@ namespace BrowserForSlowNetwork
             }
             catch (Exception ex2)
             {
+                FehlerSwitch = 2;
                 FehlerCode = ex2.ToString();
                 TickfehlerAusgabe();
             }
@@ -59,6 +61,7 @@ namespace BrowserForSlowNetwork
             }
             catch (Exception ex3)
             {
+                FehlerSwitch = 3;
                 FehlerCode = ex3.ToString();
                 TickfehlerAusgabe();
             }
@@ -69,6 +72,7 @@ namespace BrowserForSlowNetwork
             }
             catch (Exception ex4)
             {
+                FehlerSwitch = 4;
                 FehlerCode = ex4.ToString();
                 TickfehlerAusgabe();
             }
@@ -79,18 +83,19 @@ namespace BrowserForSlowNetwork
             }
             catch (Exception ex5)
             {
+                FehlerSwitch = 5;
                 FehlerCode = ex5.ToString();
                 TickfehlerAusgabe();
             }
             
             RestartCore();
         }
-
+        static int FehlerSwitch;
         static void TickfehlerAusgabe()
         {
-            switch (FehlerCode)
+            switch (FehlerSwitch)
             {
-                case "Erzeugen der Program Variablen":
+                case 1:
                     Console.Clear();
                     Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
                     Console.WriteLine("    ║                  Schwerer fehler im Browser Tick                    ║");
@@ -99,7 +104,7 @@ namespace BrowserForSlowNetwork
                     Console.ReadKey();
 
                     break;
-                case "Starten wichtiger Browser Komponeten":
+                case 2:
                     Console.Clear();
                     Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
                     Console.WriteLine("    ║                  Schwerer fehler im Browser Tick                    ║");
@@ -108,7 +113,7 @@ namespace BrowserForSlowNetwork
                     Console.ReadKey();
 
                     break;
-                case "Aufrufen des Netzwerkcodes":
+                case 3:
                     Console.Clear();
                     Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
                     Console.WriteLine("    ║                  Schwerer fehler im Browser Tick                    ║");
@@ -118,7 +123,7 @@ namespace BrowserForSlowNetwork
                     Console.ReadKey();
 
                     break;
-                case "Lesen des Seitencodes":
+                case 4:
                     Console.Clear();
                     Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
                     Console.WriteLine("    ║                  Schwerer fehler im Browser Tick                    ║");
@@ -127,7 +132,7 @@ namespace BrowserForSlowNetwork
                     Console.ReadKey();
 
                     break;
-                case "Ausgabe der Seitenkomponenten":
+                case 5:
                     Console.Clear();
                     Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
                     Console.WriteLine("    ║                  Schwerer fehler im Browser Tick                    ║");
