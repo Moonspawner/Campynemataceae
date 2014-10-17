@@ -19,21 +19,31 @@ namespace BrowserForSlowNetwork
     class CoreTick
     {
         static string FehlerCode;
+        static bool Gforce;
 
-        public static void StartCore()
+        public static void StartCore(bool force)
         {
+<<<<<<< HEAD
             Tick(true);
+=======
+            Tick();
+            Gforce = force;
+>>>>>>> origin/master
         }
 
         public static void RestartCore()
         {
             Console.Clear();
+<<<<<<< HEAD
             Tick(true);
+=======
+            Tick();
+>>>>>>> origin/master
         }
 
-        static void Tick(bool force)
+        static void Tick()
         {
-            if (force == true)
+            if (Gforce == true)
             {
                 CoreClass.Init();
                 CoreNetzwerk.Aufrufen();
