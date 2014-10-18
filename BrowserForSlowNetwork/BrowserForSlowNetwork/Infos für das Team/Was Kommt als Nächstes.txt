@@ -1,0 +1,20 @@
+﻿////////////////////////////////////////////////////////////////////////////
+//Sachen die wir als Näcchstes Implementieren wollen////////////////////////
+////////////////////////////////////////////////////////////////////////////
+
+Haupt server mit Nahmensliste mit IP´s
+Geamcht(Netzwerkteil in Neue .cs auslagern)
+
+
+
+
+
+
+
+Client -> Nameserver ->(IPliste) -> Client -> Server mit namen Steph -> Client
+
+
+//////Standart Form
+Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
+Console.WriteLine("    ║                                                                     ║");
+Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
