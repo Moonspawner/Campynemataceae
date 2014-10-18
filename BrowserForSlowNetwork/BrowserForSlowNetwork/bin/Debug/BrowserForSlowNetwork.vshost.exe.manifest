@@ -50,7 +50,11 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>erpS+0aBB4/Mtb9BAAEnTzcHY+l+46iUkf2M4T2zDOs=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>WLrySqxZkqe76ZOBuFtj+E4/Wajtpq8HJRzJRQWD20s=</dsig:DigestValue>
+>>>>>>> origin/master
       </hash>
     </dependentAssembly>
   </dependency>

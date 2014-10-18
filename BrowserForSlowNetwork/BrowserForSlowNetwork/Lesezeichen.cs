@@ -20,11 +20,14 @@ namespace BrowserForSlowNetwork
         {
             Console.Clear();
             Console.Title = "TK Browser :: Lesezeichen";
-            Console.WriteLine("    ╔══════════════════════════════════════════════════════════════════════╗"); 
+            Console.WriteLine("    ╔══════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("    ║                            Lesezeichen                               ║");
+            Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣");
             Console.WriteLine("    ║                                                                      ║");
-            Console.WriteLine("    ║                          Lesezeichenmenü                             ║");
+            Console.WriteLine("    ║                                                                      ║");
             Console.WriteLine("    ║                                                                      ║");
             Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣");
+<<<<<<< HEAD
             Console.WriteLine("");
             Console.WriteLine("Beenden, Neu");
             var key2 = Console.ReadKey();
@@ -97,6 +100,26 @@ namespace BrowserForSlowNetwork
             }
             var line = new string(key2.KeyChar, 1) + Console.ReadLine();
             switch (line)
+=======
+            Console.WriteLine("    ║Lesezeichen                                                           ║");
+            Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣");
+            Console.WriteLine("    ║ -Neu                                                                 ║");
+            Console.WriteLine("    ║  Erstelle ein Neues Lesezeichen                                      ║");
+            Console.WriteLine("    ║                                                                      ║");
+            Console.WriteLine("    ║ -Beenden                                                             ║");
+            Console.WriteLine("    ║  Zurück zur Startseite                                               ║");
+            Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣");
+            Console.WriteLine("    ║                                                                      ║");
+            Console.WriteLine("    ║                                                                      ║");
+            Console.WriteLine("    ║                                                                      ║");
+            Console.WriteLine("    ║                                                                      ║");
+            Console.WriteLine("    ║                                                                      ║");
+            Console.WriteLine("    ║                                                                      ║");
+            Console.WriteLine("    ║                                                                      ║");
+            Console.WriteLine("    ║Beenden, Neu                                                          ║");
+            Console.WriteLine("    ╚══════════════════════════════════════════════════════════════════════╝");
+            switch (Console.ReadLine())
+>>>>>>> origin/master
             {
                 case "beenden":
                     if (beenden == true)
