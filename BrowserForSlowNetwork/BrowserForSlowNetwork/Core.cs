@@ -38,7 +38,7 @@ namespace BrowserForSlowNetwork
         public static void Main(string[] args)
         {
             Console.SetBufferSize(80,25);
-            CoreTick.StartCore();
+            CoreTick.StartCore(true);
         }
 
         public static void Startscreen()

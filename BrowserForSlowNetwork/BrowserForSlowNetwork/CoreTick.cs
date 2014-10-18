@@ -23,22 +23,14 @@ namespace BrowserForSlowNetwork
 
         public static void StartCore(bool force)
         {
-<<<<<<< HEAD
-            Tick(true);
-=======
-            Tick();
             Gforce = force;
->>>>>>> origin/master
+            Tick();
         }
 
         public static void RestartCore()
         {
             Console.Clear();
-<<<<<<< HEAD
-            Tick(true);
-=======
             Tick();
->>>>>>> origin/master
         }
 
         static void Tick()

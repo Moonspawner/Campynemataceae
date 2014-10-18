@@ -12,18 +12,20 @@ namespace BrowserForSlowNetwork
     {
         //Nach Brocken
         public static Dictionary<ConsoleKey, string> dictionary = new Dictionary<ConsoleKey, string>();
-        public static Dictionary<ConsoleKey, string> dictionarynew = new Dictionary<ConsoleKey, string>();
         public static int zähler = 112;
+        public static StreamReader file1 = new StreamReader("bookmarks.json");
         public static void Menü()
         {
             Console.Clear();
             Console.Title = "TK Browser :: Lesezeichen";
-            Console.WriteLine("Sie sind im Lesezeichenmenü.");
-            Console.WriteLine("Was möchten Sie machen?");
+            Console.WriteLine("    ╔══════════════════════════════════════════════════════════════════════╗"); 
+            Console.WriteLine("    ║                                                                      ║");
+            Console.WriteLine("    ║                          Lesezeichenmenü                             ║");
+            Console.WriteLine("    ║                                                                      ║");
+            Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣");
             Console.WriteLine("");
             Console.WriteLine("Beenden, Neu");
-            var prüfen = Console.ReadLine();
-            switch (prüfen)
+            switch (Console.ReadLine())
             {
                 case "beenden":
                     Beenden();
@@ -45,19 +47,17 @@ namespace BrowserForSlowNetwork
             Console.WriteLine("");
             if (File.Exists("bookmarks.json"))
             {
-                var file1 = new StreamReader("bookmarks.json");
-                Dictionary<ConsoleKey, string> dictionary = JsonConvert.DeserializeObject<Dictionary<ConsoleKey, string>>(file1.ReadToEnd());
-                file1.Close();
+                dictionary = JsonConvert.DeserializeObject<Dictionary<ConsoleKey, string>>(file1.ReadToEnd());
             }
             else
             {
                 while (zähler <= 123)
                 {
                     ConsoleKey zählerkey = (ConsoleKey)zähler;
-                    dictionarynew.Add(zählerkey, "");
+                    dictionary.Add(zählerkey, "");
                     zähler++;
                 }
-                string jsonnew = JsonConvert.SerializeObject(dictionarynew, Formatting.Indented);
+                string jsonnew = JsonConvert.SerializeObject(dictionary, Formatting.Indented);
                 File.WriteAllText("bookmarks.json", jsonnew);
                 //file1.Close();
             }
@@ -235,6 +235,7 @@ namespace BrowserForSlowNetwork
                 {
                     dictionary[ConsoleKey.F12] = "";
                 }
+                file1.Close();
                 File.WriteAllText("bookmarks.json", json);
             }
             else
