@@ -8,12 +8,14 @@ using System.IO;
 
 namespace BrowserForSlowNetwork
 {
-    class Lesezeichen
+    static class Lesezeichen
     {
         //Nach Brocken
         public static Dictionary<ConsoleKey, string> dictionary = new Dictionary<ConsoleKey, string>();
         public static int zähler = 112;
         public static StreamReader file1 = new StreamReader("bookmarks.json");
+        public static bool beenden = false;
+        public static string steph2 = "";
         public static void Menü()
         {
             Console.Clear();
@@ -25,12 +27,92 @@ namespace BrowserForSlowNetwork
             Console.WriteLine("    ╠══════════════════════════════════════════════════════════════════════╣");
             Console.WriteLine("");
             Console.WriteLine("Beenden, Neu");
-            switch (Console.ReadLine())
+            var key2 = Console.ReadKey();
+            dictionary = JsonConvert.DeserializeObject<Dictionary<ConsoleKey, string>>(file1.ReadToEnd());
+            switch (key2.Key)
+            {
+                case ConsoleKey.F1:
+                    steph2 = dictionary[ConsoleKey.F1];
+                    CoreClass.Eingabe = steph2;
+                    CoreNetzwerk.Aufrufen();
+                    break;
+                case ConsoleKey.F2:
+                    steph2 = dictionary[ConsoleKey.F2];
+                    CoreClass.Eingabe = steph2;
+                    CoreNetzwerk.Aufrufen();
+                    break;
+                case ConsoleKey.F3:
+                    steph2 = dictionary[ConsoleKey.F3];
+                                        CoreClass.Eingabe = steph2;
+                    CoreNetzwerk.Aufrufen();
+                    break;
+                case ConsoleKey.F4:
+                    steph2 = dictionary[ConsoleKey.F4];
+                                        CoreClass.Eingabe = steph2;
+                    CoreNetzwerk.Aufrufen();
+                    break;
+                case ConsoleKey.F5:
+                    steph2 = dictionary[ConsoleKey.F5];
+                                        CoreClass.Eingabe = steph2;
+                    CoreNetzwerk.Aufrufen();
+                    break;
+                case ConsoleKey.F6:
+                    steph2 = dictionary[ConsoleKey.F6];
+                                        CoreClass.Eingabe = steph2;
+                    CoreNetzwerk.Aufrufen();
+                    break;
+                case ConsoleKey.F7:
+                    steph2 = dictionary[ConsoleKey.F7];
+                                        CoreClass.Eingabe = steph2;
+                    CoreNetzwerk.Aufrufen();
+                    break;
+                case ConsoleKey.F8:
+                    steph2 = dictionary[ConsoleKey.F8];
+                                        CoreClass.Eingabe = steph2;
+                    CoreNetzwerk.Aufrufen();
+                    break;
+                case ConsoleKey.F9:
+                    steph2 = dictionary[ConsoleKey.F9];
+                                        CoreClass.Eingabe = steph2;
+                    CoreNetzwerk.Aufrufen();
+                    break;
+                case ConsoleKey.F10:
+                    steph2 = dictionary[ConsoleKey.F10];
+                                        CoreClass.Eingabe = steph2;
+                    CoreNetzwerk.Aufrufen();
+                    break;
+                case ConsoleKey.F11:
+                    steph2 = dictionary[ConsoleKey.F11];
+                                        CoreClass.Eingabe = steph2;
+                    CoreNetzwerk.Aufrufen();
+                    break;
+                case ConsoleKey.F12:
+                    steph2 = dictionary[ConsoleKey.F12];
+                                        CoreClass.Eingabe = steph2;
+                    CoreNetzwerk.Aufrufen();
+                    break;
+                default:
+
+                    break;
+            }
+            var line = new string(key2.KeyChar, 1) + Console.ReadLine();
+            switch (line)
             {
                 case "beenden":
-                    Beenden();
+                    if (beenden == true)
+                    {
+                        Beenden();
+                    }
+                    else
+                    {
+                        BeendenNix();
+                    }
                     break;
                 case "neu":
+                    if (beenden == false)
+                    {
+                        beenden = true;
+                    }
                     Neu();
                     break;
                 default:
@@ -242,6 +324,11 @@ namespace BrowserForSlowNetwork
             {
                 File.WriteAllText("bookmarks.json", json);
             }
+            CoreTick.StartCore(false);
+        }
+        public static void BeendenNix()
+        {
+            CoreTick.StartCore(false);
         }
     }
 }

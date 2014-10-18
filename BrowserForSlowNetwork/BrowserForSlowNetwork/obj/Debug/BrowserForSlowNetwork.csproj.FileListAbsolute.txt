@@ -23,9 +23,9 @@ C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSl
 C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.application
 C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.exe
 C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.pdb
-C:\Users\Stephan Höhn\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.exe.config
-C:\Users\Stephan Höhn\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Stephan Höhn\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\modem.wav
+C:\Users\Stephan Höhn\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.exe.config
 C:\Users\Stephan Höhn\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.exe.manifest
 C:\Users\Stephan Höhn\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.application
 C:\Users\Stephan Höhn\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\BrowserForSlowNetwork.exe
@@ -36,4 +36,3 @@ C:\Users\Stephan Höhn\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserF
 C:\Users\Stephan Höhn\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.application
 C:\Users\Stephan Höhn\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.exe
 C:\Users\Stephan Höhn\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\obj\Debug\BrowserForSlowNetwork.pdb
-C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\Newtonsoft.Json.xml
