@@ -53,10 +53,10 @@ namespace BrowserForSlowNetwork
 
         public static void Aufrufen()
         {
-            if ("" == Lesezeichen.steph2)
-            {
-                CoreClass.Startscreen();
-            }
+            //if (Lesezeichen.steph2 == "")
+            //{
+            //    CoreClass.Startscreen();
+            //}
             //Prüft ob die Datei mit einem / endet, wenn ja leitet er auf die index.txt weiter
 
             StandartPages.EingangsSwitchString = CoreClass.Eingabe + "";
