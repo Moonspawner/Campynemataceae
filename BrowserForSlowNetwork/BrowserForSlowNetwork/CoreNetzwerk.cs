@@ -79,10 +79,10 @@ namespace BrowserForSlowNetwork
                                                      else
                                                      {
                                                          Ping Sender2 = new Ping();
-                                                         PingReply Result2 = Sender.Send("188.193.113.201");
+                                                         PingReply Result2 = Sender.Send("188.193.108.51");
                                                          if (Result2.Status == IPStatus.Success)
                                                          {
-                                                             URL = "http://188.193.113.201/tkbrowser/" + CoreClass.Eingabe + ".tk";
+                                                             URL = "http://188.193.108.51/tkbrowser/" + CoreClass.Eingabe + ".tk";
                                                          }
                                                          else 
                                                          {
@@ -103,7 +103,7 @@ namespace BrowserForSlowNetwork
                           CoreClass.zähler = 0;
                           System.Threading.Thread.Sleep(500);
                           Console.Clear();
-                          Console.Title = "Telekom Browser :: Anpingen...";
+                          Console.Title = "TK Browser :: Anpingen...";
                           while(CoreClass.zähler == 0)
                           {
                               punkte2 += ".";
@@ -119,6 +119,7 @@ namespace BrowserForSlowNetwork
             }
         }
 
+        
         public static void Downloader()
         {
             SoundPlayer player = new SoundPlayer("modem.wav");
