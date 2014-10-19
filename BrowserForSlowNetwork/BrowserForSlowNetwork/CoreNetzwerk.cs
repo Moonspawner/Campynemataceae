@@ -71,18 +71,18 @@ namespace BrowserForSlowNetwork
             {
                 Parallel.Invoke(new Action[]{()=>{
                                                      Ping Sender = new Ping();
-                                                     PingReply Result = Sender.Send("alexmitter.tk");
+                                                     PingReply Result = Sender.Send("192.168.0.106");
                                                      if (Result.Status == IPStatus.Success)
                                                      {
-                                                         URL = "http://alexmitter.tk/tkbrowser/" + CoreClass.Eingabe + ".tk";
+                                                         URL = "http://192.168.0.106/tkbrowser/" + CoreClass.Eingabe + ".tk";
                                                      }
                                                      else
                                                      {
                                                          Ping Sender2 = new Ping();
-                                                         PingReply Result2 = Sender.Send("188.193.108.51");
+                                                         PingReply Result2 = Sender.Send("alexmitter.tk");
                                                          if (Result2.Status == IPStatus.Success)
                                                          {
-                                                             URL = "http://188.193.108.51/tkbrowser/" + CoreClass.Eingabe + ".tk";
+                                                             URL = "http://alexmitter.tk/tkbrowser/" + CoreClass.Eingabe + ".tk";
                                                          }
                                                          else 
                                                          {
