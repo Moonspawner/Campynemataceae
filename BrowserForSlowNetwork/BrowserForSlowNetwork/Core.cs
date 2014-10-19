@@ -37,7 +37,7 @@ namespace BrowserForSlowNetwork
         [STAThread]
         public static void Main(string[] args)
         {
-            Console.SetBufferSize(80,25);
+            //Console.SetBufferSize(80,25);
             CoreTick.StartCore(true);
         }
 

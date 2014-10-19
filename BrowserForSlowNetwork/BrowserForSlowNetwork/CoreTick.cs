@@ -23,18 +23,11 @@ namespace BrowserForSlowNetwork
 
         public static void StartCore(bool force)
         {
-            CoreClass.FileSpace = "";
-            CoreClass.Ausgabeninhalt = "";
-            CoreClass.Eingabe = "";
-            Gforce = force;
             Tick();
         }
 
         public static void RestartCore()
         {
-            CoreClass.FileSpace = "";
-            CoreClass.Ausgabeninhalt = "";
-            CoreClass.Eingabe = "";
             Console.Clear();
             Tick();
         }
