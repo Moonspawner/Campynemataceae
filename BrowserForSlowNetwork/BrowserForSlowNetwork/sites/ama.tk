@@ -1,0 +1,28 @@
+<head>
+	<title>
+		AnimeMädchenAnzien
+	</title>
+</head>
+<text>
+	Launch AmA
+</text>
+
+<skript>
+	pause;
+	string Hallo;
+	global string HAllo2;
+	int nein;
+	global int nein2;
+</skript>
+<text>
+§§§Startscreen§§§
+</text>
+<skript>
+switch
+1 = next;
+2 = <link> ama.info </link>
+3 = browser.restart;
+</script>
+<text>
+frage 1
+</text>

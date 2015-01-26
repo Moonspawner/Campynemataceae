@@ -2,6 +2,9 @@
 using System.Media;
 using System.Net.NetworkInformation;
 using System.Threading.Tasks;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
 using BrowserForSlowNetwork;
 
 namespace BrowserForSlowNetwork
@@ -70,35 +73,39 @@ namespace BrowserForSlowNetwork
             else
             {
                 Parallel.Invoke(new Action[]{()=>{
-                                                     Ping Sender = new Ping();
-                                                     PingReply Result = Sender.Send("192.168.0.106");
-                                                     if (Result.Status == IPStatus.Success)
-                                                     {
-                                                         URL = "http://192.168.0.106/tkbrowser/" + CoreClass.Eingabe + ".tk";
-                                                     }
-                                                     else
-                                                     {
-                                                         Ping Sender2 = new Ping();
-                                                         PingReply Result2 = Sender.Send("alexmitter.tk");
-                                                         if (Result2.Status == IPStatus.Success)
+                                                     if(!File.Exists(Path.Combine("sites", CoreClass.Eingabe) + ".tk")) {
+                                                         Ping Sender = new Ping();
+                                                         PingReply Result = Sender.Send("192.168.0.106");
+                                                         if (Result.Status == IPStatus.Success)
                                                          {
-                                                             URL = "http://alexmitter.tk/tkbrowser/" + CoreClass.Eingabe + ".tk";
+                                                             URL = "http://192.168.0.106/tkbrowser/" + CoreClass.Eingabe + ".tk";
                                                          }
-                                                         else 
+                                                         else
+        {
+
+        }
                                                          {
-                                                             Console.WriteLine("    ╔════════════════════════════════════════════════════════════════════════╗");
-                                                             Console.WriteLine("    ║         Der Client kann sich nicht mit dem Server verbinden            ║");
-                                                             Console.WriteLine("    ║ Prüfen sie ihre Internetverbindung und versuchen sie es später nochmal ║");
-                                                             Console.WriteLine("    ╚════════════════════════════════════════════════════════════════════════╝");
-                                                             CoreClass.zähler = 1;
-                                                             CoreClass.tester2 = 1;
-                                                             Console.ReadLine();
-                                                             Console.Clear();
-                                                             Aufrufen();
-                                                         }
-                                                     }
-                                                     CoreClass.zähler = 1;
-                                                     punkte2 = "..";
+                                                             Ping Sender2 = new Ping();
+                                                             PingReply Result2 = Sender.Send("alexmitter.tk");
+                                                             if (Result2.Status == IPStatus.Success)
+                                                             {
+                                                                 URL = "http://alexmitter.tk/tkbrowser/" + CoreClass.Eingabe + ".tk";
+                                                             }
+                                                             else
+                                                             {
+                                                                 Console.WriteLine("    ╔════════════════════════════════════════════════════════════════════════╗");
+                                                                 Console.WriteLine("    ║         Der Client kann sich nicht mit dem Server verbinden            ║");
+                                                                 Console.WriteLine("    ║ Prüfen sie ihre Internetverbindung und versuchen sie es später nochmal ║");
+                                                                 Console.WriteLine("    ╚════════════════════════════════════════════════════════════════════════╝");
+                                                                 CoreClass.zähler = 1;
+                                                                 CoreClass.tester2 = 1;
+                                                                 Console.ReadLine();
+                                                                 Console.Clear();
+                                                                 Aufrufen();
+                                                             }
+                                                         }}
+                                                         CoreClass.zähler = 1;
+                                                         punkte2 = "..";
                 },()=>{
                           CoreClass.zähler = 0;
                           System.Threading.Thread.Sleep(500);
@@ -126,7 +133,12 @@ namespace BrowserForSlowNetwork
             Parallel.Invoke(new Action[]{()=>{
                                                  try
                                                  {
-                                                     CoreClass.FileSpace = new System.Net.WebClient().DownloadString(URL);
+                                                     var localfilename = Path.Combine("sites",  CoreClass.Eingabe) + ".tk";
+                                                     if(File.Exists(localfilename)) {
+                                                        CoreClass.FileSpace = File.ReadAllText(localfilename);
+                                                     }else {
+                                                        CoreClass.FileSpace = new System.Net.WebClient().DownloadString(URL);
+                                                     }                                   
                                                      Console.Clear();
                                                      Console.Title = "";
                                                      Console.ForegroundColor = ConsoleColor.Green;                                                     

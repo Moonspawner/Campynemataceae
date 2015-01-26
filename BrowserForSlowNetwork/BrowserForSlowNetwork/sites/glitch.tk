@@ -1,0 +1,18 @@
+﻿<link="tk://glitch">
+  possible<box>*derp*</box>glitches
+</link>
+<box>Go back: <link="tk://tknext_home">link</link></box>
+<color=&2>2 <color=&5>5 <color=&c>c </color>first color tag closed
+&1
+&&2
+&&&3
+&&&&4
+&&&&&5
+&&&&&&6
+&zzzzzz
+&&zzzzzz
+&&&zzzzzz
+&&&&zzzzzz
+&&&&&zzzzzz
+&&&&&&zzzzzz
+before<box>&5Lorem ipsum<box><color=&8>a box</color></box>&5dolor sed</box>after
