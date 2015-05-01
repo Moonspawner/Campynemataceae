@@ -56,3 +56,9 @@ C:\Users\dr4\Documents\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin
 C:\Users\dr4\Documents\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\sites\home.tk
 C:\Users\dr4\Documents\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\sites\steph.tk
 C:\Users\dr4\Documents\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\sites\test.tk
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\sites\test.tk
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\sites\alexmitter.tk
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\sites\ama.tk
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\sites\glitch.tk
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\sites\home.tk
+C:\Users\Alexander\Documents\GitHub\TKBrowser\BrowserForSlowNetwork\BrowserForSlowNetwork\bin\Debug\sites\steph.tk

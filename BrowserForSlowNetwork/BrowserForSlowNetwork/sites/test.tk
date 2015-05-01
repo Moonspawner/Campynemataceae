@@ -1,29 +1,6 @@
-<head>
-	<title>
-		LOL das ist DUMM
-	</title>
-</head>
-
-<batch>
-	<skriptIO=true>
-		@echo off
-		ping google.de
-	<skriptIO=false>
-</batch>
-
-<beep>
-1000
-1000
-</beep>
-
-
-
-<box>
-Box Test ahllo das ist eine große box bayer hallo
-</box>
-<text>
-hallo das ist der text
-	<color=&2> Hallo das ist farbig </color>
-hallo also das ist dahinter nach der farbe
-</text>
-
+<head><title>tkbrowsernext homepage</title></head>
+<color=&6><box><color=&c>tkbrowsernext homepage <color=#840><link="tk://home">old home</link></color></color></box></color>
+<color=#DD8>some text
+</color>
+<link="tk://steph">stephs seite</link>
+<link="tk://alexmitter">alexmitters seite</link>

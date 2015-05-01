@@ -39,7 +39,7 @@ namespace BrowserForSlowNetwork
                 CoreClass.Init();
                 CoreNetzwerk.Aufrufen();
                 CoreNetzwerk.Downloader();
-                CoreClass.Tags();
+                Engine.Parser();
                 CoreClass.Ausgabe();
                 RestartCore();
                 
@@ -81,7 +81,7 @@ namespace BrowserForSlowNetwork
 
                 try
                 {
-                    CoreClass.Tags();
+                    Engine.Parser();
                 }
                 catch (Exception ex4)
                 {

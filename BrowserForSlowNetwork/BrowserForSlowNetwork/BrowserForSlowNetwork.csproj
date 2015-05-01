@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="About.cs" />
     <Compile Include="CoreTick.cs" />
+    <Compile Include="Engine.cs" />
     <Compile Include="Lesezeichen.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="IPlugin.cs" />
