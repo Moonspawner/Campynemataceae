@@ -43,9 +43,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BrowserForSlowNetwork\BrowserForSlowNetwork.csproj">
+    <ProjectReference Include="..\BrowserForSlowNetwork\TKBrowser Campynemataceae.csproj">
       <Project>{e0449638-6bfd-4727-9383-ac6aaca2fc82}</Project>
-      <Name>BrowserForSlowNetwork</Name>
+      <Name>TKBrowser Campynemataceae</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
