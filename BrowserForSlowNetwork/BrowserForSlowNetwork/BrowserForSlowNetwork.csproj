@@ -103,6 +103,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <None Include="sites\startseite.tk">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="sites\steph.tk">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
