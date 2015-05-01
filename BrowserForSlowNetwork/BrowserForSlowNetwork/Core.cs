@@ -49,13 +49,6 @@ namespace BrowserForSlowNetwork
 
             CoreTick.Manuell("startseite");
 
-            //CoreClass.Eingabe = "startseite";
-
-            
-            //CoreNetzwerk.Downloader();
-            //Engine.Parser();
-            //CoreClass.Ausgabe();
-
             Console.Write("    >> ");
             CoreClass.Eingabe = Console.ReadLine();
         }
