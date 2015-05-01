@@ -6,6 +6,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using BrowserForSlowNetwork;
+using System.Net;
 
 namespace BrowserForSlowNetwork
 {
@@ -18,48 +19,42 @@ namespace BrowserForSlowNetwork
             public static string NameServerIP = "http://alexmitter.tk/tknameserver/standart.tkn";
             public static string NameServerFileSpace;
             public static string NameServerBekommenURI;
-        public static void NameServerConnect()
-        {
-            if (NameServerBekommenURI != "")
-            {
-                NameServerBekommenURI = "";
-            }
-            Console.WriteLine("Versuche zu Nameserver zu verbinden...");
-            try
-            {
-                try
-                {
-                    NameServerFileSpace = new System.Net.WebClient().DownloadString("http://192.168.0.106/tknameserver/standart.tkn");
-
-                }
-                catch
-                {
-                    NameServerFileSpace = new System.Net.WebClient().DownloadString(NameServerIP);
-                }
-            }
-            catch
-            {
-                Console.Clear();
-                Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
-                Console.WriteLine("    ║                 Keine Verbindung zum Nameserver                     ║");
-                Console.WriteLine("    ║                                                                     ║");
-                Console.WriteLine("    ║                           Wiederholen?                              ║");
-                Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
-                Console.ReadKey();
-                Console.Clear();
-                CoreTick.RestartCore();
-            }
-
-                Console.WriteLine(NameServerFileSpace);
-            Console.ReadKey();
-        }
-
         public static void Aufrufen()
         {
-            Lesezeichen.LOL();
-            //Prüft ob die Datei mit einem / endet, wenn ja leitet er auf die index.txt weiter
+			/* 
 
-            StandartPages.EingangsSwitchString = CoreClass.Eingabe + "";
+			Networkcode by PlaySteph310
+
+			*/
+			string adress = CoreClass.Eingabe;
+			string nameserver = "";
+			// remove http://
+			if (adress.Contains('http://') == TRUE)
+			{
+				adress.Replace('http://', '');
+				// senseless code by Alexmitter > Console.WriteLine("Hello World");
+			}
+			// split link to single strings
+			string[] adress_alone = adress.Split ('/');
+			// check domain
+			new System.Net.WebClient().DownloadString("http://tk.steph.cf/dns.php?name=" + adress_alone[0]);
+			if (nameserver != "")
+			{
+				for (int i = adress.Length; i > 1; i--)
+				{
+					adress = adress + "/" + adress_alone[i];
+				}
+				CoreClass.FileSpace = new System.Net.WebClient().DownloadString(URL);
+			}
+
+
+
+
+
+
+
+
+            /*StandartPages.EingangsSwitchString = CoreClass.Eingabe + "";
             StandartPages.EingangsSwitch();
 
             if (CoreClass.Eingabe == "")
@@ -189,7 +184,7 @@ namespace BrowserForSlowNetwork
                       player.Stop();
                       punkte2 = "..";
                       Console.Title = "";
-            }});
+            }});*/
         }
     }
 }
