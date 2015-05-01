@@ -7,8 +7,8 @@
     <ProjectGuid>{E0449638-6BFD-4727-9383-AC6AACA2FC82}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BrowserForSlowNetwork</RootNamespace>
-    <AssemblyName>BrowserForSlowNetwork</AssemblyName>
+    <RootNamespace>TKBrowser</RootNamespace>
+    <AssemblyName>TKBrowser Campynemataceae</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
