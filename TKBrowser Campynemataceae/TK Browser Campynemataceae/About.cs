@@ -15,10 +15,9 @@ namespace BrowserForSlowNetwork
             Console.Title = "TK-Browser :: Über Uns";
             Console.WriteLine("TK-Browser / Browser for Slow Network");
             Console.WriteLine("");
-            Console.WriteLine("Entwickelt von Alexmitter, PlaySteph310 und xDevil123");
+            Console.WriteLine("Entwickelt von Moonspawner");
             Console.WriteLine("Alexmitter - GitHub: http://github.com/Alexmitter");
             Console.WriteLine("PlaySteph310 - GitHub: http://github.com/PlaySteph310");
-            Console.WriteLine("xDevil123 - GitHub: http://github.com/xDevil123");
             Console.ReadLine();
             Console.Clear();
             Console.Title = "Telekom Browser :: StartPage";

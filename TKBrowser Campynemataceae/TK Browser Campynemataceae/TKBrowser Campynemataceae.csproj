@@ -115,7 +115,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
-    <Content Include="Infos für das Team\Was Kommt als Nächstes.txt" />
     <Content Include="modem.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

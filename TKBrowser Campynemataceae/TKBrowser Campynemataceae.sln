@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrowserForSlowNetwork", "BrowserForSlowNetwork\BrowserForSlowNetwork.csproj", "{E0449638-6BFD-4727-9383-AC6AACA2FC82}"
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TKBrowser Campynemataceae", "BrowserForSlowNetwork\TKBrowser Campynemataceae.csproj", "{E0449638-6BFD-4727-9383-AC6AACA2FC82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastSkript", "FastSkript\FastSkript.csproj", "{063563DF-2477-401F-83F5-D54DE1A0997F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projekt FastSkript", "FastSkript\Projekt FastSkript.csproj", "{063563DF-2477-401F-83F5-D54DE1A0997F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
