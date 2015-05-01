@@ -105,6 +105,15 @@ namespace BrowserForSlowNetwork
             RestartCore();
         }
         static int FehlerSwitch;
+
+        public static void Manuell(string Adresse)
+        {
+            CoreClass.Eingabe = Adresse;
+            CoreNetzwerk.Downloader();
+            Engine.Parser();
+            CoreClass.Ausgabe();
+        }
+
         static void TickfehlerAusgabe()
         {
             switch (FehlerSwitch)
