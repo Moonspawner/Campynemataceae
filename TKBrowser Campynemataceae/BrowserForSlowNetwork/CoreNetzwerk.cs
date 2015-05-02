@@ -52,10 +52,7 @@ namespace BrowserForSlowNetwork
         {
             string URI = URL + "/" + name + ".tk";
             CoreClass.FileSpace = new System.Net.WebClient().DownloadString(URL);
-
         }
-
-
     }
 }
 

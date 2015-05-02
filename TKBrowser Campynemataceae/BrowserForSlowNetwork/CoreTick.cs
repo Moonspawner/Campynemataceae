@@ -38,7 +38,7 @@ namespace BrowserForSlowNetwork
             {
                 CoreClass.Init();
                 CoreNetzwerk.Aufrufen();
-                CoreNetzwerk.Downloader();
+                //CoreNetzwerk.Downloader();
                 Engine.Parser();
                 CoreClass.Ausgabe();
                 RestartCore();
@@ -70,7 +70,7 @@ namespace BrowserForSlowNetwork
 
                 try
                 {
-                    CoreNetzwerk.Downloader();
+                    //CoreNetzwerk.Downloader();
                 }
                 catch (Exception ex3)
                 {
@@ -109,7 +109,7 @@ namespace BrowserForSlowNetwork
         public static void Manuell(string Adresse)
         {
             CoreClass.Eingabe = Adresse;
-            CoreNetzwerk.Downloader();
+            //CoreNetzwerk.Downloader();
             Engine.Parser();
             CoreClass.Ausgabe();
         }
