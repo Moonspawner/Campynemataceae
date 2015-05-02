@@ -65,7 +65,30 @@ namespace BrowserForSlowNetwork
             CoreClass.FileSpace = new System.Net.WebClient().DownloadString(URL);
         }
 
+        static void Visualisation(string Meldung)
+        {
+            switch(Meldung)
+            {
+                case "nameserver_error":
+                    Console.Clear();
+                            Console.WriteLine("    ╔════════════════════════════════════════════════════════════════════════╗");
+                            Console.WriteLine("    ║         Der Client kann sich nicht mit dem Server verbinden            ║");
+                            Console.WriteLine("    ║ Prüfen sie ihre Internetverbindung und versuchen sie es später nochmal ║");
+                            Console.WriteLine("    ╚════════════════════════════════════════════════════════════════════════╝");
+                    break;
+                case "site_error":
+                        Console.Clear();
+                        Console.Title = "Telekom Browser :: Fehler";
+                        Console.WriteLine("");
+                        Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
+                        Console.WriteLine("    ║                Die Datei konnte nicht gefunden werden               ║");
+                        Console.WriteLine("    ║                  Bitte überprüfen sie ihre Eingabe                  ║");
+                        Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
+                    break;
 
-         
+
+            }
+        }
+
     }
 }
