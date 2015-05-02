@@ -80,7 +80,8 @@
     <Compile Include="About.cs" />
     <Compile Include="CoreNetzwerkNEW.cs" />
     <Compile Include="CoreTick.cs" />
-    <Compile Include="Engine.cs" />
+    <Compile Include="Engine\Parser.cs" />
+    <Compile Include="Engine\Script.cs" />
     <Compile Include="Lesezeichen.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="IPlugin.cs" />

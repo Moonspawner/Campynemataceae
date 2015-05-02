@@ -14,9 +14,9 @@ using System.ComponentModel;
 using System.Media;
 using System.Diagnostics;
 
-namespace BrowserForSlowNetwork
+namespace Engine
 {
-    class Engine
+    class Parser
     {
         public static bool inbatch;
         public static bool tellnoskript;

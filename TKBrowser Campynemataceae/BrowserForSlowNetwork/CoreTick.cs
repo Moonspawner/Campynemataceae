@@ -81,7 +81,7 @@ namespace BrowserForSlowNetwork
 
                 try
                 {
-                    Engine.Parser();
+                    Engine.Parser.Parser();
                 }
                 catch (Exception ex4)
                 {
