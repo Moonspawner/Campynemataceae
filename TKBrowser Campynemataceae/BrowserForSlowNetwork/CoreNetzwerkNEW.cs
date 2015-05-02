@@ -10,7 +10,7 @@ using System.Net;
 
 namespace BrowserForSlowNetwork
 {
-    static class CoreNetzwerk
+    static class CoreNetzwerk_
     {
         public static string URL_ = "";
         private static string punkte2_ = "..";
@@ -44,7 +44,7 @@ namespace BrowserForSlowNetwork
 				{
 					adress = adress + "/" + adress_alone[i];
 				}
-				CoreClass.FileSpace = new System.Net.WebClient().DownloadString(URL);
+				CoreClass.FileSpace = new System.Net.WebClient().DownloadString(URL_);
 			}
         }
 
