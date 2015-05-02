@@ -41,11 +41,6 @@ namespace BrowserForSlowNetwork
 			// split link to single strings
 			adress_alone = adress.Split ('/');
 			// check domain
-            return adress_alone[0];
-        }
-
-        static void GetSite()
-        {
             string nameserver = "";
             new System.Net.WebClient().DownloadString("http://tk.steph.cf/dns.php?name=" + adress_alone[0]);
             if (nameserver != "")
@@ -56,6 +51,12 @@ namespace BrowserForSlowNetwork
                 }
                 Space = new System.Net.WebClient().DownloadString(URL_);
             }
+            return Space;
+        }
+
+        static void GetSite()
+        {
+            ;
         }
 
         public static void GetSiteManuall(string name, string URL)
@@ -63,5 +64,8 @@ namespace BrowserForSlowNetwork
             string URI = URL + "/" + name + ".tk";
             CoreClass.FileSpace = new System.Net.WebClient().DownloadString(URL);
         }
+
+
+         
     }
 }
