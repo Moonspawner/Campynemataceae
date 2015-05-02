@@ -17,14 +17,13 @@ namespace BrowserForSlowNetwork
 
         public static string GetSite(string URI)
         {
-            GetNameserver(URI);
-            GetSite();
+			GetFilesOverNameServer(URI);
             return Space;
         }
 
         static string adress;
         static string[] adress_alone;
-        static string GetNameserver(string URI)
+        static string GetFilesOverNameServer(string URI)
         {
 			/* 
 
@@ -49,14 +48,10 @@ namespace BrowserForSlowNetwork
                 {
                     adress = adress + "/" + adress_alone[i];
                 }
-                Space = new System.Net.WebClient().DownloadString(URL_);
+				adress = "http://" + adress;
+				Space = new System.Net.WebClient().DownloadString(adress);
             }
             return Space;
-        }
-
-        static void GetSite()
-        {
-            ;
         }
 
         public static void GetSiteManuall(string name, string URL)
