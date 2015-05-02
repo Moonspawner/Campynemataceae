@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.cs" />
+    <Compile Include="CoreNetzwerkNEW.cs" />
     <Compile Include="CoreTick.cs" />
     <Compile Include="Engine.cs" />
     <Compile Include="Lesezeichen.cs" />
