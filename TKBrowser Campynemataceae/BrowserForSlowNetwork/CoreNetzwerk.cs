@@ -29,9 +29,9 @@ namespace BrowserForSlowNetwork
 			string adress = CoreClass.Eingabe;
 			string nameserver = "";
 			// remove http://
-			if (adress.Contains('http://') == TRUE)
+			if (adress.Contains("http://") == true)
 			{
-				adress.Replace('http://', '');
+				adress.Replace("http://", "");
 				// senseless code by Alexmitter > Console.WriteLine("Hello World");
 			}
 			// split link to single strings
