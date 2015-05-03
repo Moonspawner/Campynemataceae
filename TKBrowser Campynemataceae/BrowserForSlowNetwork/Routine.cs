@@ -20,7 +20,7 @@ namespace BrowserForSlowNetwork
     {
         //Einstellungen
         static bool ForcedRoutine = false;
-        static bool TestRoutine = false;
+        static bool TestRoutine = true;
         //Variablen
         static string FehlerCode;
 

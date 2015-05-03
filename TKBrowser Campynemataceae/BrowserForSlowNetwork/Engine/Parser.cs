@@ -202,7 +202,7 @@ namespace Engine
                     }
                     else if (zeile.Trim() == "</batch>")
                     {
-                         CoreClass.CodeWriter();
+                        Engine.Scripting.Script(CodeInDatei); //Änderung für neuen Script Writer
                         //datei ausführen und den consolen-output hier hin ausgeben
                         incode2 = false;
                         incode = false;
