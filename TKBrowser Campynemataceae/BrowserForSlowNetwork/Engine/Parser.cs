@@ -138,7 +138,7 @@ namespace Engine
                     }
                     if (inbox == true)
                     {
-                        OutputBox.Nachricht(zeile);
+                        OutputBox.Nachricht(zeile.TrimStart().TrimEnd());
                         continue;
                     }
 
