@@ -142,9 +142,8 @@ namespace BrowserForSlowNetwork
                                                      }                                   
                                                      Console.Clear();
                                                      Console.Title = "";
-                                                     Console.ForegroundColor = ConsoleColor.Green;                                                     
-                                                     OutputBox.Nachricht(">> Datei: " + CoreClass.Eingabe);
-                                                     OutputBox.Ausgabe();
+                                                     Console.ForegroundColor = ConsoleColor.Green;
+                                                     Engine.Funktionen.Box_Zeichnen(">> Datei: " + CoreClass.Eingabe);
                                                      Console.ForegroundColor = ConsoleColor.Gray;
                                                      Console.WriteLine("");
                                                  }
@@ -153,7 +152,7 @@ namespace BrowserForSlowNetwork
                                                      if(CoreClass.tester2 == 0)
                                                      {
                                                          Console.Clear();
-                                                         Console.Title = "Telekom Browser :: Fehler";
+                                                         Console.Title = "TKBrowser :: Fehler";
                                                          Console.WriteLine("");
                                                          Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
                                                          Console.WriteLine("    ║                Die Datei konnte nicht gefunden werden               ║");
@@ -176,7 +175,7 @@ namespace BrowserForSlowNetwork
                           Console.Clear();
                       }
                       player.Play();
-                      Console.Title = "Telekom Browser :: Verbinden...";
+                      Console.Title = "TKBrowser :: Verbinden...";
                       while(CoreClass.zähler == 0)
                       {
                           punkte2 += ".";

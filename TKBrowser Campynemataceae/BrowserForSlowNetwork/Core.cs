@@ -94,7 +94,7 @@ namespace BrowserForSlowNetwork
             Console.WriteLine(" ║Drücken Sie eine Taste um zur Startseite zurückzukehren.                    ║");
             Console.WriteLine(" ╚════════════════════════════════════════════════════════════════════════════╝");
             Console.ReadKey();
-            Console.Title = "Telekom Browser :: StartPage";
+            Console.Title = "TKBrowser :: StartPage";
             Console.Clear();
         }
 

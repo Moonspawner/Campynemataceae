@@ -73,7 +73,7 @@ namespace BrowserForSlowNetwork
                     break;
                 case "site_error":
                         Console.Clear();
-                        Console.Title = "Telekom Browser :: Fehler";
+                        Console.Title = "TKBrowser :: Fehler";
                         Console.WriteLine("");
                         Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
                         Console.WriteLine("    ║                Die Datei konnte nicht gefunden werden               ║");

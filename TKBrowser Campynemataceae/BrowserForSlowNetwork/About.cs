@@ -20,19 +20,8 @@ namespace BrowserForSlowNetwork
             Console.WriteLine("PlaySteph310 - GitHub: http://github.com/PlaySteph310");
             Console.ReadLine();
             Console.Clear();
-            Console.Title = "Telekom Browser :: StartPage";
+            Console.Title = "TK Browser :: StartPage";
         }
-        /*public static void()
-        {
-            Console.Clear();
-            Console.Title = "Telekom Browser :: AboutConfig";
-            Console.WriteLine("Telekom Browser");
-            Console.WriteLine("");
-            Console.WriteLine("Version: InDev");
-            Console.ReadLine();
-            Console.Clear();
-            Console.Title = "Telekom Browser :: StartPage";
-            Aufrufen();
-        }*/
+        
     }
 }

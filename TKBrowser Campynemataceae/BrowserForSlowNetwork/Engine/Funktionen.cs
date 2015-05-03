@@ -21,7 +21,7 @@ namespace Engine
         
         public static string Box_Zeichnen(string box)
         {
-            
+            box.TrimStart().TrimEnd();
             int Länge = box.Length;
             string Oben;
             string Mitte;
@@ -51,9 +51,23 @@ namespace Engine
 
             string NachrichtOutput = Oben + "\n" + Mitte + "\n" + Unten;
             return NachrichtOutput;
-	{
+	        
 		 
-	}
+	        
+        }
+
+        public static void Über()
+        {
+            Console.Clear();
+            Console.Title = "TK-Browser :: Über Uns";
+            Console.WriteLine("TK-Browser / Browser for Slow Network");
+            Console.WriteLine("");
+            Console.WriteLine("Entwickelt von Moonspawner");
+            Console.WriteLine("Alexmitter - GitHub: http://github.com/Alexmitter");
+            Console.WriteLine("PlaySteph310 - GitHub: http://github.com/PlaySteph310");
+            Console.ReadLine();
+            Console.Clear();
+            Console.Title = "TK Browser :: StartPage";
         }
     }
 }

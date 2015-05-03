@@ -133,12 +133,12 @@ namespace Engine
                     if (zeile.Trim() == "</box>")
                     {
                         inbox = false;
-                        OutputBox.Ausgabe();
+                        Engine.Funktionen.Box_Zeichnen(zeile);
                         continue;
                     }
                     if (inbox == true)
                     {
-                        OutputBox.Nachricht(zeile.TrimStart().TrimEnd());
+                        Engine.Funktionen.Box_Zeichnen(zeile);
                         continue;
                     }
 
