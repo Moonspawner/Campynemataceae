@@ -76,7 +76,7 @@ namespace BrowserForSlowNetwork
             Console.Write("    >> ");
             CoreClass.Eingabe = Console.ReadLine();
 			if (CoreClass.Eingabe == "lesezeichen") {
-				Lesezeichen.Menü ();
+				Lesezeichen.startLesezeichen ();
 			}
         }
 

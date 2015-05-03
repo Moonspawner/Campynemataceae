@@ -20,7 +20,7 @@ namespace BrowserForSlowNetwork
     {
         //Einstellungen
         static bool ForcedRoutine = false;
-        static bool TestRoutine = true;
+        static bool TestRoutine = false;
         //Variablen
         static string FehlerCode;
 
@@ -42,7 +42,7 @@ namespace BrowserForSlowNetwork
             if(TestRoutine == true)
             {
                 CoreClass.Init();
-				Lesezeichen.Menü ();
+				Lesezeichen.startLesezeichen ();
                 //CoreClass.FileSpace = CoreNetzwerk_.GetSite(Console.ReadLine());
                 Engine.Parsing.Parser(CoreClass.FileSpace);
                 CoreClass.Ausgabe();

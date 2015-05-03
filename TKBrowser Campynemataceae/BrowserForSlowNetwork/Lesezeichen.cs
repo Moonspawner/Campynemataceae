@@ -14,6 +14,30 @@ namespace BrowserForSlowNetwork
         public static int zähler = 112;
         public static bool beenden = false;
         public static string steph2 = "";
+		public static void startLesezeichen()
+		{
+			// Prüft ob Datei existiert
+			if (File.Exists("bookmarks.json"))
+			{
+				// Konvertiert Jsondatei in ein dictionary
+				StreamReader file1 = new StreamReader("bookmarks.json");
+				bookmarks = JsonConvert.DeserializeObject<Dictionary<ConsoleKey, string>>(file1.ReadToEnd());
+				file1.Close();
+			}
+			else
+			{
+				// Zählt alle F-Tasten und fügt sie dem Dictionary hinzu
+				for(int i = 112; i <= 123; i++)
+				{
+					ConsoleKey key = (ConsoleKey)i;
+					bookmarks.Add (key, "");
+				}
+				// Konvertiert das Dictionary in eine JSON-File und speichert
+				string json = JsonConvert.SerializeObject(bookmarks, Formatting.Indented);
+				File.WriteAllText("bookmarks.json", json);
+			}
+			Menü ();
+		}
         public static void Menü()
         {
             Console.Clear();
@@ -42,59 +66,29 @@ namespace BrowserForSlowNetwork
             Console.WriteLine("    ║Beenden, Neu                                                          ║");
             Console.WriteLine("    ╚══════════════════════════════════════════════════════════════════════╝");
             Console.Write    ("    >>");
-			// Prüft ob Datei existiert
-			if (File.Exists("bookmarks.json"))
-			{
-				// Konvertiert Jsondatei in ein dictionary
-				StreamReader file1 = new StreamReader("bookmarks.json");
-				bookmarks = JsonConvert.DeserializeObject<Dictionary<ConsoleKey, string>>(file1.ReadToEnd());
-				file1.Close();
-			}
-			else
-			{
-				// Zählt alle F-Tasten und fügt sie dem Dictionary hinzu
-				for(int i = 112; i <= 123; i++)
-				{
-					ConsoleKey key = (ConsoleKey)i;
-					bookmarks.Add (key, "");
-				}
-				// Konvertiert das Dictionary in eine JSON-File und speichert
-				string json = JsonConvert.SerializeObject(bookmarks, Formatting.Indented);
-				File.WriteAllText("bookmarks.json", json);
-			}
             // Überprüft erste Taste, ob es eine F-Taste ist
 			var firstkey = Console.ReadKey();
 			//ConsoleKey checkkey = firstkey;
 			if (((int)firstkey.Key) >= 112 && ((int)firstkey.Key) <= 123)
 			{
-				steph2 = bookmarks[ConsoleKey.F1];
-				CoreClass.Eingabe = steph2;
-				CoreNetzwerk.Aufrufen();
+				CoreClass.FileSpace = CoreNetzwerk_.GetSite(bookmarks[firstkey.Key]);
+				Engine.Parsing.Parser(CoreClass.FileSpace);
+				CoreClass.Ausgabe();
+				CoreClass.Startscreen ();
 			}
 			//Wenn keine F-taste dann soll er weiter schreiben können
 			var line = new string(firstkey.KeyChar, 1) + Console.ReadLine();
             switch (line)
             {
-                case "beenden":
-                    if (beenden == true)
-                    {
-                        Beenden();
-                    }
-                    else
-                    {
-                        BeendenNix();
-                    }
-                    break;
-                case "neu":
-                    if (beenden == false)
-                    {
-                        beenden = true;
-                    }
-                    Neu();
-                    break;
-                default:
-                    Menü();
-                    break;
+			case "beenden":
+				Beenden ();
+				break;
+			case "neu":
+				Neu ();
+                break;
+            default:
+                Menü();
+                break;
 
             }
         }
