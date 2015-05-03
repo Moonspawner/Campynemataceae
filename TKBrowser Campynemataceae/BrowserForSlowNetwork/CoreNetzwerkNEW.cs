@@ -4,14 +4,18 @@ using System.Net.NetworkInformation;
 using System.Threading.Tasks;
 using System.IO;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using BrowserForSlowNetwork;
 using System.Net;
+using System.Text.RegularExpressions;
 
 namespace BrowserForSlowNetwork
 {
-    static class CoreNetzwerk_
+    internal static class CoreNetzwerk_
     {
+        private static string[] _nameServer = { "http://tk.steph.cf/dns.php?name={0}", "http://jfds.eu/tkbrowser/dns.php?name={0}" };
+
         public static string URL_ = "";
         private static string Space = "";
 
@@ -24,12 +28,30 @@ namespace BrowserForSlowNetwork
         {
             var serveralias = address.Split('/')[0];
             var filename = address.Substring(Math.Min(serveralias.Length + 1, address.Length));
-            filename = Path.Combine(filename, "index.tk").Replace('\\', '/');
+            var server = "";
+            foreach (var nameServer in _nameServer) {
+                server = new WebClient().DownloadString(string.Format(nameServer, serveralias)).Trim(' ', '\n', '\r');
+                if (server != "") { break; }
+            }
+            
+            if (!server.StartsWith("http://")) { server = "http://" + server; }
+            var resolvedAddress = Path.Combine(server, filename).Replace('\\', '/');
 
-            var server = new System.Net.WebClient().DownloadString("http://tk.steph.cf/dns.php?name=" + serveralias);
-            if (!server.Trim().StartsWith("http://")) { server = "http://" + server; }
-            server = server.Replace ("\n", ""); server = server.Replace("\r", "");
-            return new System.Net.WebClient().DownloadString(Path.Combine(server, filename).Replace('\\', '/'));
+            HttpWebResponse siteRequest;
+            var siteContent = "";
+            foreach (var appendage in new[] {"", ".tk", "/index.tk"}) {
+                try {
+                    siteRequest = ((HttpWebResponse)WebRequest.Create((resolvedAddress + appendage).Replace('\\', '/')).GetResponse());
+                    siteContent = new StreamReader(siteRequest.GetResponseStream()).ReadToEnd();
+                    if (!Regex.IsMatch(siteContent, "Apache.*at.*Port", RegexOptions.Compiled | RegexOptions.Singleline)) {
+                        break;
+                    }
+                } catch (Exception e) {
+                    Debug.WriteLine(e);
+                }
+            }
+
+            return siteContent;
         }
 
         public static void GetSiteManuall(string name, string URL)
