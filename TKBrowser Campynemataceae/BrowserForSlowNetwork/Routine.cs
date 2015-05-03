@@ -42,7 +42,8 @@ namespace BrowserForSlowNetwork
             if(TestRoutine == true)
             {
                 CoreClass.Init();
-                CoreClass.FileSpace = CoreNetzwerk_.GetSite(Console.ReadLine());
+				Lesezeichen.Menü ();
+                //CoreClass.FileSpace = CoreNetzwerk_.GetSite(Console.ReadLine());
                 Engine.Parsing.Parser(CoreClass.FileSpace);
                 CoreClass.Ausgabe();
                 RestartRoutine();
@@ -53,7 +54,8 @@ namespace BrowserForSlowNetwork
                 CoreClass.Init();
                 //CoreNetzwerk.Aufrufen();
                 //CoreNetzwerk.Downloader();
-				CoreClass.FileSpace = CoreNetzwerk_.GetSite(Console.ReadLine());
+				CoreClass.Startscreen();
+				CoreClass.FileSpace = CoreNetzwerk_.GetSite(CoreClass.Eingabe);
                 Engine.Parsing.Parser(CoreClass.FileSpace);
 				//Console.WriteLine(CoreClass.FileSpace);
                 CoreClass.Ausgabe();
