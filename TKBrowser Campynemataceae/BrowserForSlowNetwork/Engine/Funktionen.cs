@@ -21,6 +21,7 @@ namespace Engine
         
         public static string Box_Zeichnen(string box)
         {
+            
             int Länge = box.Length;
             string Oben;
             string Mitte;
