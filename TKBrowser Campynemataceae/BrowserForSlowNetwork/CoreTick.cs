@@ -37,9 +37,11 @@ namespace BrowserForSlowNetwork
             if (Gforce == true)
             {
                 CoreClass.Init();
-                CoreNetzwerk.Aufrufen();
-                CoreNetzwerk.Downloader();
-                Engine.Parser();
+                //CoreNetzwerk.Aufrufen();
+                //CoreNetzwerk.Downloader();
+				CoreClass.FileSpace = CoreNetzwerk_.GetSite(Console.ReadLine());
+				Engine.Parsing.Parser ();
+				//Console.WriteLine(CoreClass.FileSpace);
                 CoreClass.Ausgabe();
                 RestartCore();
                 
@@ -81,7 +83,7 @@ namespace BrowserForSlowNetwork
 
                 try
                 {
-                    Engine.Parser.Parser();
+                    Engine.Parsing.Parser();
                 }
                 catch (Exception ex4)
                 {
@@ -110,7 +112,7 @@ namespace BrowserForSlowNetwork
         {
             CoreClass.Eingabe = Adresse;
             CoreNetzwerk.Downloader();
-            Engine.Parser();
+            Engine.Parsing.Parser();
             CoreClass.Ausgabe();
         }
 

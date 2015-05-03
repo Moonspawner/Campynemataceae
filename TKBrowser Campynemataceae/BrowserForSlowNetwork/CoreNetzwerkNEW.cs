@@ -32,24 +32,26 @@ namespace BrowserForSlowNetwork
 			*/
             adress = URI;
 			// remove http://
-			if (adress.Contains("http://") == true)
-			{
-				adress.Replace("http://", "");
-				// senseless code by Alexmitter > Console.WriteLine("Hello World");
-			}
+			adress.Replace("http://", "");
+			// senseless code by Alexmitter > Console.WriteLine("Hello World");
 			// split link to single strings
 			adress_alone = adress.Split ('/');
 			// check domain
-            string nameserver = "";
-            new System.Net.WebClient().DownloadString("http://tk.steph.cf/dns.php?name=" + adress_alone[0]);
+            string nameserver = new System.Net.WebClient().DownloadString("http://tk.steph.cf/dns.php?name=" + adress_alone[0]);
             if (nameserver != "")
             {
-                for (int i = adress.Length; i > 1; i--)
-                {
-                    adress = adress + "/" + adress_alone[i];
-                }
-				adress = "http://" + adress;
-				Space = new System.Net.WebClient().DownloadString(adress);
+				var list = new List<string>(adress_alone);
+				list.RemoveAt(0);
+				adress_alone = list.ToArray();
+				foreach(string word in adress_alone)
+				{
+					nameserver = nameserver + "/" + word;
+				}
+				nameserver = "http://" + nameserver;
+				nameserver = nameserver.Replace (System.Environment.NewLine, "");
+				Console.WriteLine (nameserver);
+				Console.ReadLine ();
+				Space = new System.Net.WebClient().DownloadString(nameserver);
             }
             return Space;
         }

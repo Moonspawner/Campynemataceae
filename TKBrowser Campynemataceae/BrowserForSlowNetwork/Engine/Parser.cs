@@ -16,7 +16,7 @@ using System.Diagnostics;
 
 namespace Engine
 {
-    class Parser
+    class Parsing
     {
         public static bool inbatch;
         public static bool tellnoskript;

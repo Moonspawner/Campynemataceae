@@ -16,7 +16,7 @@ using System.Diagnostics;
 
 namespace Engine
 {
-    class Script
+    class Scripting
     {
         static int SicherheitsSchalter;
         static string Code_;
@@ -88,7 +88,7 @@ namespace Engine
                     File.Delete("skript.bat");
                 }
 
-                string CodeInDatei = CodeInDatei.Replace("\n", "\r\n");
+				string CodeInDatei = ""; //= CodeInDatei.Replace("\n", "\r\n");
                 using (StreamWriter writer = new StreamWriter("skript.bat"))
                 {
                     writer.Write(CodeInDatei);
