@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TKBrowser.Engine
 {
-    class Parser_
+    public partial class Parser
     {
+
     }
 }
