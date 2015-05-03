@@ -98,13 +98,6 @@ namespace BrowserForSlowNetwork
             Console.Clear();
         }
 
-        public static bool inbatch;
-        public static bool tellnoskript;
-        public static string CodeInDatei;
-
-        public static string WirklichAusfüren;
-        public static string Sicherheitsschranke;
-        public static bool Sicherheistschranke2;
         
 
         public static void LoadPlugins() 
