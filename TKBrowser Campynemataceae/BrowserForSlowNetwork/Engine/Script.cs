@@ -88,10 +88,10 @@ namespace Engine
                     File.Delete("skript.bat");
                 }
 
-				string CodeInDatei = ""; //= CodeInDatei.Replace("\n", "\r\n");
+				/*string CodeInDatei = "";*/ Code_ = Code_.Replace("\n", "\r\n");
                 using (StreamWriter writer = new StreamWriter("skript.bat"))
                 {
-                    writer.Write(CodeInDatei);
+                    writer.Write(Code_);
                 }
 
             }
@@ -100,7 +100,7 @@ namespace Engine
                 Console.Clear();
                 Console.WriteLine("Fehler beim Schreiben der Skript Datei, bitte Kontaktieren sie den Administrator");
                 Console.ReadKey();
-                CoreTick.RestartCore();
+                Rutine.RestartRutine();
 
             }
         }

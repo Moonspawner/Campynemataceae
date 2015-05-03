@@ -16,17 +16,22 @@ using System.Diagnostics;
 
 namespace BrowserForSlowNetwork
 {
-    class CoreTick
+    class Rutine
     {
+        //Einstellungen
+        static bool ForcedRutine = false;
+        static bool TestRutine = true;
+        //Variablen
         static string FehlerCode;
-        static bool Gforce = false;
 
-        public static void StartCore(bool force)
+
+
+        public static void StartRutine(bool force)
         {
             Tick();
         }
 
-        public static void RestartCore()
+        public static void RestartRutine()
         {
             Console.Clear();
             Tick();
@@ -34,7 +39,16 @@ namespace BrowserForSlowNetwork
 
         static void Tick()
         {
-            if (Gforce == true)
+            if(TestRutine == true)
+            {
+                CoreClass.Init();
+                CoreClass.FileSpace = CoreNetzwerk_.GetSite(Console.ReadLine());
+                Engine.Parsing.Parser();
+                CoreClass.Ausgabe();
+                RestartRutine();
+            }
+                
+            if (ForcedRutine == true)
             {
                 CoreClass.Init();
                 //CoreNetzwerk.Aufrufen();
@@ -43,7 +57,7 @@ namespace BrowserForSlowNetwork
 				Engine.Parsing.Parser ();
 				//Console.WriteLine(CoreClass.FileSpace);
                 CoreClass.Ausgabe();
-                RestartCore();
+                RestartRutine();
                 
             }
             else
@@ -104,7 +118,7 @@ namespace BrowserForSlowNetwork
                 }
             }
             
-            RestartCore();
+            RestartRutine();
         }
         static int FehlerSwitch;
 
@@ -166,7 +180,7 @@ namespace BrowserForSlowNetwork
                     Console.ReadKey();
                     break;
                 default:
-                    RestartCore();
+                    RestartRutine();
                     break;
 
             }

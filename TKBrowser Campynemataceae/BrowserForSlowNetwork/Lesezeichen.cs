@@ -341,11 +341,11 @@ namespace BrowserForSlowNetwork
             {
                 File.WriteAllText("bookmarks.json", json);
             }
-            CoreTick.StartCore(false);
+            Rutine.StartRutine(false);
         }
         public static void BeendenNix()
         {
-            CoreTick.StartCore(false);
+            Rutine.StartRutine(false);
         }
         public static void LOL()
         {

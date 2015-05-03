@@ -35,7 +35,7 @@ namespace BrowserForSlowNetwork
             {
                 Console.WriteLine(" Fehler beim Zeichnen der Box, Zu Viele zeichen im Box Tag, suche im Skript nach <box>");
                 Console.ReadKey();
-                CoreTick.RestartCore();
+                Rutine.RestartRutine();
                 return;
             }
 

@@ -79,7 +79,7 @@
   <ItemGroup>
     <Compile Include="About.cs" />
     <Compile Include="CoreNetzwerkNEW.cs" />
-    <Compile Include="CoreTick.cs" />
+    <Compile Include="Rutine.cs" />
     <Compile Include="Engine\Parser.cs" />
     <Compile Include="Engine\Script.cs" />
     <Compile Include="Lesezeichen.cs" />
