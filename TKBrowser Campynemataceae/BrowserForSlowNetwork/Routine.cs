@@ -43,7 +43,7 @@ namespace BrowserForSlowNetwork
             {
                 CoreClass.Init();
                 CoreClass.FileSpace = CoreNetzwerk_.GetSite(Console.ReadLine());
-                Engine.Parsing.Parser();
+                Engine.Parsing.Parser(CoreClass.FileSpace);
                 CoreClass.Ausgabe();
                 RestartRoutine();
             }
@@ -54,7 +54,7 @@ namespace BrowserForSlowNetwork
                 //CoreNetzwerk.Aufrufen();
                 //CoreNetzwerk.Downloader();
 				CoreClass.FileSpace = CoreNetzwerk_.GetSite(Console.ReadLine());
-				Engine.Parsing.Parser ();
+                Engine.Parsing.Parser(CoreClass.FileSpace);
 				//Console.WriteLine(CoreClass.FileSpace);
                 CoreClass.Ausgabe();
                 RestartRoutine();
@@ -109,7 +109,7 @@ namespace BrowserForSlowNetwork
 
                 try
                 {
-                    Engine.Parsing.Parser();
+                    Engine.Parsing.Parser(CoreClass.FileSpace);
                 }
                 catch (Exception ex4)
                 {
@@ -138,7 +138,7 @@ namespace BrowserForSlowNetwork
         {
             CoreClass.Eingabe = Adresse;
             CoreNetzwerk.Downloader();
-            Engine.Parsing.Parser();
+            Engine.Parsing.Parser(CoreClass.FileSpace);
             CoreClass.Ausgabe();
         }
 

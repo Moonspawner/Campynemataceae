@@ -21,7 +21,8 @@ namespace Engine
         public static bool inbatch;
         public static bool tellnoskript;
         public static string CodeInDatei;
-        public static void Parser()
+
+        public static void Parser(string code)
         {
             bool incode = false;
             bool inhead = false;
@@ -37,13 +38,13 @@ namespace Engine
 
             var tags = new List<string>();
 
-            var code = new List<string>();
+            //var code = new List<string>();
             string text = "";
             bool intitle = false;
             //bool readtitle = false;
 			//Weil sonst Statrmenü nicht gecleared wird
 			Console.Clear();
-            foreach (var zeile in CoreClass.FileSpace.Split('\n'))
+            foreach (var zeile in code.Split('\n'))
             {
                 if (zeile.Trim() == "<!— ignorerest —>")
                 {
