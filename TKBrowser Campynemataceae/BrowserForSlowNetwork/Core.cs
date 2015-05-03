@@ -70,9 +70,6 @@ namespace BrowserForSlowNetwork
             Console.WriteLine("    ║                                                                      ║");
             Console.WriteLine("    ║Bitte URI Eingeben                                                    ║");
             Console.WriteLine("    ╚══════════════════════════════════════════════════════════════════════╝");
-
-            Console.WriteLine("Ja es geht");
-            Console.ReadKey();
             //CoreTick.Manuell("startseite");
 
             Console.Write("    >> ");

@@ -41,9 +41,8 @@ namespace Engine
             string text = "";
             bool intitle = false;
             //bool readtitle = false;
-
-
-
+			//Weil sonst Statrmenü nicht gecleared wird
+			Console.Clear();
             foreach (var zeile in CoreClass.FileSpace.Split('\n'))
             {
                 if (zeile.Trim() == "<!— ignorerest —>")

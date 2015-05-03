@@ -20,7 +20,7 @@ namespace BrowserForSlowNetwork
     {
         //Einstellungen
         static bool ForcedRoutine = false;
-        static bool TestRoutine = true;
+        static bool TestRoutine = false;
         //Variablen
         static string FehlerCode;
 
@@ -72,19 +72,31 @@ namespace BrowserForSlowNetwork
                    FehlerCode = ex1.ToString();
                    TickfehlerAusgabe();
                 }
+				//Weil man sonst keinen Link eingeben kann
+				try
+				{
+					CoreClass.Startscreen();
+				}
+				catch(Exception ex2)
+				{
+					FehlerSwitch = 2;
+					FehlerCode = ex2.ToString();
+					TickfehlerAusgabe();
+				}
 
                 try
                 {
-                    CoreNetzwerk.Aufrufen();
+					//geändert weil alter funkt nicht
+					CoreClass.FileSpace = CoreNetzwerk_.GetSite(CoreClass.Eingabe);
                 }
-                    catch (Exception ex2)
+                    catch (Exception ex3)
                 {
-                     FehlerSwitch = 2;
-                FehlerCode = ex2.ToString();
-                TickfehlerAusgabe();
+                    FehlerSwitch = 3;
+                	FehlerCode = ex3.ToString();
+                	TickfehlerAusgabe();
                 }
-
-                try
+				//Weil unnötig, da im neuen Code der Downloader schon integriert ist
+                /*try
                 {
                     CoreNetzwerk.Downloader();
                 }
@@ -93,7 +105,7 @@ namespace BrowserForSlowNetwork
                     FehlerSwitch = 3;
                     FehlerCode = ex3.ToString();
                     TickfehlerAusgabe();
-                }
+                }*/
 
                 try
                 {

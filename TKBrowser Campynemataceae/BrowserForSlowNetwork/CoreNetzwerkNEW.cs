@@ -35,22 +35,35 @@ namespace BrowserForSlowNetwork
 			adress.Replace("http://", "");
 			// senseless code by Alexmitter > Console.WriteLine("Hello World");
 			// split link to single strings
+			if (adress.Substring(adress.Length -1) != "/")
+			{
+				adress = adress + "/";
+			}
 			adress_alone = adress.Split ('/');
 			// check domain
             string nameserver = new System.Net.WebClient().DownloadString("http://tk.steph.cf/dns.php?name=" + adress_alone[0]);
-            if (nameserver != "")
+			if (nameserver != "")
             {
 				var list = new List<string>(adress_alone);
-				list.RemoveAt(0);
-				adress_alone = list.ToArray();
-				foreach(string word in adress_alone)
+				for(int i = adress_alone.Length -1; i >= 0; i--)
+				{
+					if (list[i] == "")
+					{
+						list.RemoveAt (i);
+					}
+				}
+				if (list.Count == 1)
+				{
+					list.Add("index.tk");
+				}
+				list.RemoveAt (0);
+				foreach(string word in list)
 				{
 					nameserver = nameserver + "/" + word;
 				}
+				adress_alone = list.ToArray();
 				nameserver = "http://" + nameserver;
 				nameserver = nameserver.Replace (System.Environment.NewLine, "");
-				Console.WriteLine (nameserver);
-				Console.ReadLine ();
 				Space = new System.Net.WebClient().DownloadString(nameserver);
             }
             return Space;
