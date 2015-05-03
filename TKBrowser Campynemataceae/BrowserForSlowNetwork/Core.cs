@@ -38,7 +38,7 @@ namespace BrowserForSlowNetwork
         public static void Main(string[] args)
         {
             //Console.SetBufferSize(80,25);
-            Rutine.StartRutine(true);
+            Routine.StartRoutine(true);
         }
 
         public static void Startscreen()
@@ -214,7 +214,7 @@ namespace BrowserForSlowNetwork
                 Console.Clear();
                 Console.WriteLine("Fehler beim Schreiben der Skript Datei, bitte Kontaktieren sie den Administrator");
                 Console.ReadKey();
-                Rutine.RestartRutine();
+                Routine.RestartRoutine();
 
             }
         }

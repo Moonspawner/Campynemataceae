@@ -48,7 +48,7 @@ namespace BrowserForSlowNetwork
                 Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
                 Console.ReadKey();
                 Console.Clear();
-                Rutine.RestartRutine();
+                Routine.RestartRoutine();
             }
 
                 Console.WriteLine(NameServerFileSpace);
