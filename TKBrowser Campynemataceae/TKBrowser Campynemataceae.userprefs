@@ -1,9 +1,8 @@
-﻿<Properties StartupItem="BrowserForSlowNetwork/TKBrowser Campynemataceae.csproj">
+﻿<Properties StartupItem="BrowserForSlowNetwork\TKBrowser Campynemataceae.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BrowserForSlowNetwork/Engine/Parser.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BrowserForSlowNetwork\Engine\Parser.cs">
     <Files>
-      <File FileName="BrowserForSlowNetwork/Engine/Parser.cs" Line="288" Column="16" />
-      <File FileName="BrowserForSlowNetwork/Rutine.cs" Line="1" Column="1" />
+      <File FileName="BrowserForSlowNetwork\Engine\Parser.cs" Line="16" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
