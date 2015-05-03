@@ -15,58 +15,21 @@ namespace BrowserForSlowNetwork
         public static string URL_ = "";
         private static string Space = "";
 
-        public static string GetSite(string URI)
+        public static string GetSite(string uri)
         {
-			GetFilesOverNameServer(URI);
-            return Space;
+			return GetFileFromNameServer(uri);
         }
 
-        static string adress;
-        static string[] adress_alone;
-        static string GetFilesOverNameServer(string URI)
+        static string GetFileFromNameServer(string address)
         {
-			/* 
+            var serveralias = address.Split('/')[0];
+            var filename = address.Substring(Math.Min(serveralias.Length + 1, address.Length));
+            filename = Path.Combine(filename, "index.tk").Replace('\\', '/');
 
-			Networkcode by PlaySteph310, with Magic by Alexmitter
-
-			*/
-            adress = URI;
-			// remove http://
-			adress.Replace("http://", "");
-			// senseless code by Alexmitter > Console.WriteLine("Hello World");
-			// split link to single strings
-			if (adress.Substring(adress.Length -1) != "/")
-			{
-				adress = adress + "/";
-			}
-			adress_alone = adress.Split ('/');
-			// check domain
-            string nameserver = new System.Net.WebClient().DownloadString("http://tk.steph.cf/dns.php?name=" + adress_alone[0]);
-			if (nameserver != "")
-            {
-				var list = new List<string>(adress_alone);
-				for(int i = adress_alone.Length -1; i >= 0; i--)
-				{
-					if (list[i] == "")
-					{
-						list.RemoveAt (i);
-					}
-				}
-				if (list.Count == 1)
-				{
-					list.Add("index.tk");
-				}
-				list.RemoveAt (0);
-				foreach(string word in list)
-				{
-					nameserver = nameserver + "/" + word;
-				}
-				adress_alone = list.ToArray();
-				nameserver = "http://" + nameserver;
-				nameserver = nameserver.Replace (System.Environment.NewLine, "");
-				Space = new System.Net.WebClient().DownloadString(nameserver);
-            }
-            return Space;
+            var server = new System.Net.WebClient().DownloadString("http://tk.steph.cf/dns.php?name=" + serveralias);
+            if (!server.Trim().StartsWith("http://")) { server = "http://" + server; }
+            server = server.Replace ("\n", ""); server = server.Replace("\r", "");
+            return new System.Net.WebClient().DownloadString(Path.Combine(server, filename).Replace('\\', '/'));
         }
 
         public static void GetSiteManuall(string name, string URL)
