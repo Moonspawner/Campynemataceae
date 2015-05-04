@@ -68,10 +68,19 @@ namespace Engine
                 if (zeile.Trim() == "<head>")
                 {
                     inhead = true;
+                    continue;
                 }
                 if (zeile.Trim() == "</head>")
                 {
                     inhead = false;
+                    continue;
+                }
+                if (zeile.Trim() == "<body>")
+                {
+                    continue;
+                }
+                if (zeile.Trim() == "</body>")
+                {
                     continue;
                 }
                 if (inhead == true)
