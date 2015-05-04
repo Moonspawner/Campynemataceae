@@ -90,12 +90,17 @@ namespace BrowserForSlowNetwork
 
         public static void Ausgabe()
         {
-            Console.WriteLine(" ╔══════Neue Seite════════════════════════════════════════════════════════════╗");
-            Console.WriteLine(" ║Drücken Sie eine Taste um zur Startseite zurückzukehren.                    ║");
-            Console.WriteLine(" ╚════════════════════════════════════════════════════════════════════════════╝");
-            Console.ReadKey();
-            Console.Title = "TKBrowser :: StartPage";
-            Console.Clear();
+            Console.SetCursorPosition(11, 1);
+            Routine.Manuell(Console.ReadLine());
+            
+
+
+            //Console.WriteLine(" ╔══════Neue Seite════════════════════════════════════════════════════════════╗");
+            //Console.WriteLine(" ║Drücken Sie eine Taste um zur Startseite zurückzukehren.                    ║");
+            //Console.WriteLine(" ╚════════════════════════════════════════════════════════════════════════════╝");
+            //Console.ReadKey();
+            //Console.Title = "TKBrowser :: StartPage";
+            //Console.Clear();
         }
 
         

@@ -28,6 +28,14 @@ namespace BrowserForSlowNetwork
 
         public static void StartRoutine(bool force)
         {
+            if (true) //Experimentelle Titelleiste
+            {
+                Console.WriteLine("╔══════════════════════════════════════════════════════════════════════╗");
+                Console.WriteLine("║ Eingabe:                                                             ║");
+                Console.WriteLine("╚══════════════════════════════════════════════════════════════════════╝");
+                Console.SetCursorPosition(10, 1);
+            }
+
             Routine_();
         }
 
@@ -41,9 +49,22 @@ namespace BrowserForSlowNetwork
         {
             if(TestRoutine == true)
             {
-                CoreClass.Init();
-				Lesezeichen.startLesezeichen ();
-                //CoreClass.FileSpace = CoreNetzwerk_.GetSite(Console.ReadLine());
+                //CoreClass.Init();
+				//Lesezeichen.startLesezeichen ();
+                CoreClass.FileSpace = CoreNetzwerk_.GetSite(Console.ReadLine());
+
+
+                if(true) //Experimentelle Titelleiste
+                {
+                    Console.WriteLine("╔══════════════════════════════════════════════════════════════════════╗");
+                    Console.WriteLine("║ Eingabe:                                                             ║");
+                    Console.WriteLine("╚══════════════════════════════════════════════════════════════════════╝");
+                    Console.SetCursorPosition(10, 1);
+                    Console.ReadKey();
+                }
+
+
+
                 Engine.Parsing.Parser(CoreClass.FileSpace);
                 CoreClass.Ausgabe();
                 RestartRoutine();
@@ -70,7 +91,7 @@ namespace BrowserForSlowNetwork
                 }
                 catch(Exception ex1)
                 {
-                   FehlerSwitch = 1;
+                   //FehlerSwitch = 1;
                    FehlerCode = ex1.ToString();
                    TickfehlerAusgabe();
                 }
@@ -81,7 +102,7 @@ namespace BrowserForSlowNetwork
 				}
 				catch(Exception ex2)
 				{
-					FehlerSwitch = 2;
+					//FehlerSwitch = 2;
 					FehlerCode = ex2.ToString();
 					TickfehlerAusgabe();
 				}
@@ -93,7 +114,7 @@ namespace BrowserForSlowNetwork
                 }
                     catch (Exception ex3)
                 {
-                    FehlerSwitch = 3;
+                    //FehlerSwitch = 3;
                 	FehlerCode = ex3.ToString();
                 	TickfehlerAusgabe();
                 }
@@ -115,7 +136,7 @@ namespace BrowserForSlowNetwork
                 }
                 catch (Exception ex4)
                 {
-                    FehlerSwitch = 4;
+                    //FehlerSwitch = 4;
                     FehlerCode = ex4.ToString();
                     TickfehlerAusgabe();
                 }
@@ -126,7 +147,7 @@ namespace BrowserForSlowNetwork
                 }
                 catch (Exception ex5)
                 {
-                    FehlerSwitch = 5;
+                    //FehlerSwitch = 5;
                     FehlerCode = ex5.ToString();
                     TickfehlerAusgabe();
                 }
@@ -134,12 +155,10 @@ namespace BrowserForSlowNetwork
             
             RestartRoutine();
         }
-        static int FehlerSwitch;
 
-        public static void Manuell(string Adresse)
+        public static void Manuell(string url)
         {
-            CoreClass.Eingabe = Adresse;
-            CoreNetzwerk.Downloader();
+            CoreClass.FileSpace = CoreNetzwerk_.GetSite(url);
             Engine.Parsing.Parser(CoreClass.FileSpace);
             CoreClass.Ausgabe();
         }

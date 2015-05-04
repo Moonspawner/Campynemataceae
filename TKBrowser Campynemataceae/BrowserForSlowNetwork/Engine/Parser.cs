@@ -44,6 +44,12 @@ namespace Engine
             //bool readtitle = false;
 			//Weil sonst Statrmenü nicht gecleared wird
 			Console.Clear();
+
+            Console.WriteLine(" ╔════════════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine(" ║ Eingabe:                                                                   ║");
+            Console.WriteLine(" ╚════════════════════════════════════════════════════════════════════════════╝\n\r");
+            Console.SetCursorPosition(13, 1);
+
             foreach (var zeile in code.Split('\n'))
             {
                 if (zeile.Trim() == "<!— ignorerest —>")
@@ -234,7 +240,7 @@ namespace Engine
                 else
                 {
                     //Ausgabe
-                    Console.WriteLine(tag);
+                    Console.WriteLine("\n" + tag);
                 }
             }
         }
