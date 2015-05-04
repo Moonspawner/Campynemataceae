@@ -1,0 +1,2 @@
+﻿original can be found here: https://github.com/dr4yyee/tkbrowsernext/tree/master/TkParser
+needs rewrite
