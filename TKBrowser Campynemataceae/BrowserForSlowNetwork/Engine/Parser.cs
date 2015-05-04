@@ -65,6 +65,10 @@ namespace Engine
                 //        plugin.ZeilenAbruf(zeile, ref text, incode || incode2, inhead, intitle);
                 //    }
                 //}
+                if(zeile.Trim() == "\r")
+                {
+                    continue;
+                }
                 if (zeile.Trim() == "<head>")
                 {
                     inhead = true;
@@ -144,15 +148,16 @@ namespace Engine
                         continue;
 
                     }
+                    if(inbox == true)
+                    {
+                        
+                        Console.WriteLine(Engine.Funktionen.Box_Zeichnen(zeile).TrimStart().TrimEnd());
+                        inbox = false;
+                        continue;
+                    }
                     if (zeile.Trim() == "</box>")
                     {
                         inbox = false;
-                        Engine.Funktionen.Box_Zeichnen(zeile);
-                        continue;
-                    }
-                    if (inbox == true)
-                    {
-                        Engine.Funktionen.Box_Zeichnen(zeile);
                         continue;
                     }
 
