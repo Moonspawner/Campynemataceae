@@ -28,14 +28,6 @@ namespace BrowserForSlowNetwork
 
         public static void StartRoutine(bool force)
         {
-            if (true) //Experimentelle Titelleiste
-            {
-                Console.WriteLine("╔══════════════════════════════════════════════════════════════════════╗");
-                Console.WriteLine("║ Eingabe:                                                             ║");
-                Console.WriteLine("╚══════════════════════════════════════════════════════════════════════╝");
-                Console.SetCursorPosition(10, 1);
-            }
-
             Routine_();
         }
 
@@ -52,19 +44,6 @@ namespace BrowserForSlowNetwork
                 //CoreClass.Init();
 				//Lesezeichen.startLesezeichen ();
                 CoreClass.FileSpace = CoreNetzwerk_.GetSite(Console.ReadLine());
-
-
-                if(true) //Experimentelle Titelleiste
-                {
-                    Console.WriteLine("╔══════════════════════════════════════════════════════════════════════╗");
-                    Console.WriteLine("║ Eingabe:                                                             ║");
-                    Console.WriteLine("╚══════════════════════════════════════════════════════════════════════╝");
-                    Console.SetCursorPosition(10, 1);
-                    Console.ReadKey();
-                }
-
-
-
                 Engine.Parsing.Parser(CoreClass.FileSpace);
                 CoreClass.Ausgabe();
                 RestartRoutine();

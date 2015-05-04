@@ -47,8 +47,7 @@ namespace Engine
 
             Console.WriteLine(" ╔════════════════════════════════════════════════════════════════════════════╗");
             Console.WriteLine(" ║ Eingabe:                                                                   ║");
-            Console.WriteLine(" ╚════════════════════════════════════════════════════════════════════════════╝\n\r");
-            Console.SetCursorPosition(13, 1);
+            Console.WriteLine(" ╚════════════════════════════════════════════════════════════════════════════╝");
 
             foreach (var zeile in code.Split('\n'))
             {
@@ -240,7 +239,7 @@ namespace Engine
                 else
                 {
                     //Ausgabe
-                    Console.WriteLine("\n" + tag);
+                    Console.WriteLine(tag);
                 }
             }
         }
