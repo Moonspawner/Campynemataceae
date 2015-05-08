@@ -44,8 +44,8 @@ namespace BrowserForSlowNetwork
                 //CoreClass.Init();
 				//Lesezeichen.startLesezeichen ();
                 CoreClass.FileSpace = CoreNetzwerk_.GetSite(Console.ReadLine());
-                Engine.Parsing.Parser(CoreClass.FileSpace);
-                CoreClass.Ausgabe();
+                Engine.Parsing_.Parser1(CoreClass.FileSpace);
+                //CoreClass.Ausgabe();
                 RestartRoutine();
             }
                 

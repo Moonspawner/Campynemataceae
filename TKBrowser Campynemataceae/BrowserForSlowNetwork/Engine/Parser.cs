@@ -56,6 +56,7 @@ namespace Engine
                     break;
                 }
 
+                
 
                 //Plugin Support
                 //if (CoreClass.plugins != null)
@@ -65,6 +66,7 @@ namespace Engine
                 //        plugin.ZeilenAbruf(zeile, ref text, incode || incode2, inhead, intitle);
                 //    }
                 //}
+                
                 if(zeile.Trim() == "\r")
                 {
                     continue;
