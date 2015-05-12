@@ -24,7 +24,7 @@ namespace BrowserForSlowNetwork
         //Variablen
         static string FehlerCode;
 
-
+        static private Engine.Parsing_ _parsing = new Engine.Parsing_();
 
         public static void StartRoutine(bool force)
         {
@@ -44,7 +44,7 @@ namespace BrowserForSlowNetwork
                 //CoreClass.Init();
 				//Lesezeichen.startLesezeichen ();
                 CoreClass.FileSpace = CoreNetzwerk_.GetSite(Console.ReadLine());
-                Engine.Parsing_.Parser1(CoreClass.FileSpace);
+                _parsing.Parser1(CoreClass.FileSpace);
                 //CoreClass.Ausgabe();
                 RestartRoutine();
             }
