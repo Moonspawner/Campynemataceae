@@ -13,6 +13,8 @@ using System.Reflection;
 using System.ComponentModel;
 using System.Media;
 using System.Diagnostics;
+using clay;
+
 
 namespace Engine
 {
@@ -21,7 +23,7 @@ namespace Engine
         static int SicherheitsSchalter;
         static string Code_;
 
-        public static void Script(string code)
+        public static void Batch(string code)
         {
             Code_ = code;
             if(code != "")
@@ -126,5 +128,13 @@ namespace Engine
                 Console.WriteLine("    ║                         Skript Output Ende                          ║");
                 Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
         }
+
+
+        void Clay()
+        {
+            var clayrt = new Runtime();
+            
+        }
     }
+
 }
