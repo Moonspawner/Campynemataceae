@@ -240,7 +240,13 @@ namespace Engine
                     }
 
 
-
+                    if (inclay == true)
+                    {
+                        if (zeile != "<clay>" && zeile != "</clay>")
+                        {
+                            CodeInDatei = CodeInDatei + zeile + "\n";
+                        }
+                    }
                     if (zeile.Trim() == "<clay>")
                     {
                         CodeInDatei = "";
@@ -251,13 +257,7 @@ namespace Engine
                         Engine.ClayScript.StartClayRT(CodeInDatei); 
                         inclay = false;
                     }
-                    if (inclay == true)
-                    {
-                        if (zeile != "<clay>" && zeile != "</clay>")
-                        {
-                            CodeInDatei = CodeInDatei + zeile + "\n";
-                        }
-                    }
+                    
 
 
                 }
