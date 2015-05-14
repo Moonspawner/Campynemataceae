@@ -41,7 +41,9 @@ namespace BrowserForSlowNetwork
         {
             if(TestRoutine == true)
             {
-                Engine.ClayScript.StartClayRT("tell LOLOLOLOLOLOLOL");
+                TKBrowser.UpdateModul.StartUpdateProzess("","");
+                Console.ReadLine();
+                //Engine.ClayScript.StartClayRT("tell LOLOLOLOLOLOLOL");
                 //CoreClass.Init();
 				//Lesezeichen.startLesezeichen ();
                 CoreClass.FileSpace = CoreNetzwerk_.GetSite(Console.ReadLine());
@@ -65,6 +67,14 @@ namespace BrowserForSlowNetwork
             }
             else
             {
+                try
+                {
+                    TKBrowser.UpdateModul.StartUpdateProzess("", "");
+                }
+                catch
+                {
+                    Console.WriteLine("Fehler bei dem Versuch ClayRuntime zu Aktualisieren");
+                }
                 try
                 {
                 CoreClass.Init();

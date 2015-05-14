@@ -95,6 +95,7 @@
     <Compile Include="CoreNetzwerk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StandartPages.cs" />
+    <Compile Include="UpdateModul.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="sites\alexmitter.tk">
