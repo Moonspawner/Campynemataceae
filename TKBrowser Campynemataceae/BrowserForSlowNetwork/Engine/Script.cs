@@ -18,7 +18,7 @@ using clay;
 
 namespace Engine
 {
-    class Scripting
+    class BatchScript
     {
         static int SicherheitsSchalter;
         static string Code_;
@@ -130,11 +130,27 @@ namespace Engine
         }
 
 
-        void Clay()
+    }
+
+
+    public class ClayScript
+    {
+        public static void StartClayRT(string code)
+        {
+            Console.WriteLine("    ╔═════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("    ║                           Clay   Output                             ║");
+            Console.WriteLine("    ╚═════════════════════════════════════════════════════════════════════╝");
+
+            RunClayCode(code);
+        }
+
+
+        static void RunClayCode(string code)
         {
             var clayrt = new Runtime();
-            
+            clayrt.Run(code);
         }
     }
+
 
 }

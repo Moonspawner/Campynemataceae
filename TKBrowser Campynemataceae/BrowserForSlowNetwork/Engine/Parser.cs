@@ -27,6 +27,7 @@ namespace Engine
             bool incode = false;
             bool inhead = false;
             bool incode2 = false;
+            bool inclay = false;
             bool inbox = false;
             bool inbeep = false;
             int beepcounter = 1;
@@ -224,7 +225,7 @@ namespace Engine
                     }
                     else if (zeile.Trim() == "</batch>")
                     {
-                        Engine.Scripting.Batch(CodeInDatei); //Änderung für neuen Script Writer
+                        Engine.BatchScript.Batch(CodeInDatei); //Änderung für neuen Script Writer
                         //datei ausführen und den consolen-output hier hin ausgeben
                         incode2 = false;
                         incode = false;
@@ -237,6 +238,28 @@ namespace Engine
                     {
                         text += zeile + "\n";
                     }
+
+
+
+                    if (zeile.Trim() == "<clay>")
+                    {
+                        CodeInDatei = "";
+                        inclay = true;
+                    }
+                    else if (zeile.Trim() == "</clay>")
+                    {
+                        Engine.ClayScript.StartClayRT(CodeInDatei); 
+                        inclay = false;
+                    }
+                    if (inclay == true)
+                    {
+                        if (zeile != "<clay>" && zeile != "</clay>")
+                        {
+                            CodeInDatei = CodeInDatei + zeile + "\n";
+                        }
+                    }
+
+
                 }
             }
 

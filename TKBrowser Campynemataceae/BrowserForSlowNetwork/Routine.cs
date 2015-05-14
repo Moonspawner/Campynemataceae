@@ -41,6 +41,7 @@ namespace BrowserForSlowNetwork
         {
             if(TestRoutine == true)
             {
+                Engine.ClayScript.StartClayRT("tell LOLOLOLOLOLOLOL");
                 //CoreClass.Init();
 				//Lesezeichen.startLesezeichen ();
                 CoreClass.FileSpace = CoreNetzwerk_.GetSite(Console.ReadLine());
