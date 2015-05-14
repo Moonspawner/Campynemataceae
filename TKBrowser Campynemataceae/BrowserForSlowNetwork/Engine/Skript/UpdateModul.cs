@@ -11,8 +11,8 @@ namespace TKBrowser
 {
     public class UpdateModul
     {
-        static string FileHash = "";
-        static string ServerHash = "";
+        static string FileHash;
+        static string ServerHash;
         public static  void StartUpdateProzess(string args, string ignore)
         {
             GetFileHash_Clay();
@@ -32,7 +32,7 @@ namespace TKBrowser
                 shaHash = shaForStream.Hash;
             }
 
-            string FileHash = BitConverter.ToString(shaHash).Replace("-", string.Empty);   
+            FileHash = BitConverter.ToString(shaHash).Replace("-", string.Empty);   
         }
         static void GetServerHash_Clay()
         {
@@ -45,7 +45,7 @@ namespace TKBrowser
             {
 
                 Console.WriteLine("ClayRuntime wird Aktualisiert");
-
+                System.Threading.Thread.Sleep(500);
                 WebClient webClient = new WebClient();
                 webClient.DownloadFile("http://tk.steph.cf/clay/clayruntime.dll", @"clayruntime.dll");
                

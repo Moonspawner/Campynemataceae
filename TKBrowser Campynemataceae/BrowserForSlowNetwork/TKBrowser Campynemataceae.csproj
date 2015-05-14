@@ -88,14 +88,14 @@
     <Compile Include="Engine\Parser_.cs" />
     <Compile Include="Routine.cs" />
     <Compile Include="Engine\Parser.cs" />
-    <Compile Include="Engine\Script.cs" />
+    <Compile Include="Engine\Skript\Script.cs" />
     <Compile Include="Lesezeichen.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="IPlugin.cs" />
     <Compile Include="CoreNetzwerk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StandartPages.cs" />
-    <Compile Include="UpdateModul.cs" />
+    <Compile Include="Engine\Skript\UpdateModul.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="sites\alexmitter.tk">
